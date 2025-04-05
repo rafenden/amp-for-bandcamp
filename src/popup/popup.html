@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bandcamp Tuned</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <h1>Bandcamp Tuned</h1>
+  
+  <div class="section">
+    <div class="section-title">Keyboard Shortcuts</div>
+    <div class="shortcut">
+      <span>Play/Pause</span>
+      <span class="key">Space</span>
+    </div>
+    <div class="shortcut">
+      <span>Next Track</span>
+      <span class="key">↓</span>
+    </div>
+    <div class="shortcut">
+      <span>Previous Track</span>
+      <span class="key">↑</span>
+    </div>
+    <div class="shortcut">
+      <span>Fast Forward</span>
+      <span class="key">→</span>
+    </div>
+    <div class="shortcut">
+      <span>Rewind</span>
+      <span class="key">←</span>
+    </div>
+  </div>
+  
+  <div class="section">
+    <div class="section-title">Settings</div>
+    <div class="toggle">
+      <span>Sticky Player on Album Page</span>
+      <label class="toggle-switch">
+        <input type="checkbox" id="stickyPlayer" checked>
+        <span class="toggle-slider"></span>
+      </label>
+    </div>
+    <div class="toggle">
+      <span>Auto Play Next Track</span>
+      <label class="toggle-switch">
+        <input type="checkbox" id="autoPlayNext" checked>
+        <span class="toggle-slider"></span>
+      </label>
+    </div>
+    <div class="setting">
+      <span>Seek Time (seconds)</span>
+      <input type="number" id="seekSeconds" min="5" max="60" step="5" value="30" class="seek-input">
+    </div>
+  </div>
+  
+  <div class="footer">
+    <small>This extension is not affiliated with Bandcamp or Epic Games.</small>
+  </div>
+
+  <script src="../vendor/browser-polyfill.min.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

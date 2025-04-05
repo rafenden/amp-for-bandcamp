@@ -1,0 +1,23 @@
+{
+  "name": "bandcamp-tuned",
+  "version": "1.0.0",
+  "description": "Browser extension that enhances the Bandcamp listening experience",
+  "keywords": [
+    "bandcamp",
+    "music",
+    "browser-extension",
+    "safari-extension",
+    "chrome-extension",
+    "firefox-addon"
+  ],
+  "author": "Rafal Enden",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rafenden/bandcamp-tuned-extension.git"
+  },
+  "scripts": {
+    "build:zip": "zip -r dist/bandcamp-tuned.zip manifest.json src/ vendor/ icons/",
+    "build:safari": "mkdir -p dist/build && xcodebuild -project \"xcode/Bandcamp Tuned.xcodeproj\" -scheme \"Bandcamp Tuned (macOS)\" -configuration Release -derivedDataPath dist/safari build",
+    "build": "npm run build:zip && npm run build:safari"
+  }
+}
