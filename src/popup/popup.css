@@ -122,16 +122,10 @@ input:checked + .toggle-slider:before {
   text-align: center;
   margin-top: 15px;
   padding-top: 10px;
-  border-top: 1px solid #eee;
+  border-top: 1px solid #ccc;
 }
 
-/* Firefox-specific fixes */
-@-moz-document url-prefix() {
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
-  }
-  
-  .key {
-    font-family: Consolas, 'Liberation Mono', Courier, monospace;
-  }
+.disclaimer {
+  margin-bottom: 5px;
+  font-size: 8px;
 }

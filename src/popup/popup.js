@@ -4,6 +4,7 @@ const showLeaveWarningToggle = document.getElementById('showLeaveWarning');
 const seekSecondsInput = document.getElementById('seekSeconds');
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Load settings
   browser.storage.sync.get({
     stickyPlayer: true,
     autoPlayNext: true,

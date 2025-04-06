@@ -1,3 +1,8 @@
+// Use chrome API if browser API is not available
+if (typeof browser === 'undefined') {
+  window.browser = chrome;
+}
+
 class BasePage {
   constructor(settings = {}) {
     this.id = 'bandcamp-tuned-base-page';
