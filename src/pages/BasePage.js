@@ -136,13 +136,19 @@ class BasePage {
   prevSong() {}
 
   setupPageLeaveWarning() {
-    window.onbeforeunload = (e) => {
+    const handler = (e) => {
       const audio = document.querySelector('audio');
       if (this.settings.showLeaveWarning && audio && !audio.paused) {
+        // Modern browsers
         e.preventDefault();
+        // Legacy browsers
         e.returnValue = '';
         return '';
       }
     };
+
+    // Add both modern and legacy event listeners
+    window.addEventListener('beforeunload', handler);
+    window.onbeforeunload = handler;
   }
 }
