@@ -8,82 +8,62 @@
   <script src="../../vendor/browser-polyfill.min.js"></script>
   <script src="popup.js" defer></script>
 </head>
-<body class="popup">
-  <h1 class="popup__title">Bandcamp Tuned</h1>
+<body>
+  <h1>Bandcamp Tuned</h1>
   
-  <div class="section">
-    <div class="section__title">Settings</div>
-    <div class="toggle">
-      <div class="toggle__control">
-        <label class="switch">
-          <input class="switch__input" type="checkbox" id="stickyPlayer" checked>
-          <span class="switch__slider"></span>
-        </label>
-      </div>
-      <label class="toggle__label" for="stickyPlayer">Sticky Player on Album Page</label>
-    </div>
-    <div class="toggle">
-      <div class="toggle__control">
-        <label class="switch">
-          <input class="switch__input" type="checkbox" id="autoPlayNext" checked>
-          <span class="switch__slider"></span>
-        </label>
-      </div>
-      <label class="toggle__label" for="autoPlayNext">Auto Play Next Track</label>
-    </div>
-    <div class="toggle">
-      <div class="toggle__control">
-        <label class="switch">
-          <input class="switch__input" type="checkbox" id="showLeaveWarning" checked>
-          <span class="switch__slider"></span>
-        </label>
-      </div>
-      <label class="toggle__label" for="showLeaveWarning">Show Leave Warning When Playing</label>
-    </div>
-    <div class="setting">
-      <div class="setting__control">
-        <input class="setting__input" type="number" id="seekSeconds" min="5" max="60" step="5" value="30">
-      </div>
-      <label class="setting__label" for="seekSeconds">Seek Time (seconds)</label>
-    </div>
-  </div>
+  <section>
+    <h2>Settings</h2>
+    <div class="settings">
+      <label>
+        <input type="checkbox" id="stickyPlayer" checked>
+        Sticky Player on Album Page
+      </label>
 
-  <div class="section">
-    <div class="section__title">Keyboard Shortcuts</div>
-    <div class="shortcut">
-      <div class="shortcut__control">
-        <span class="key key--space">Space</span>
-      </div>
-      <span class="shortcut__label">Play/Pause</span>
+      <label>
+        <input type="checkbox" id="autoPlayNext" checked>
+        Auto Play Next Track
+      </label>
+
+      <label>
+        <input type="checkbox" id="showLeaveWarning" checked>
+        Show Leave Warning When Playing
+      </label>
+
+      <label>
+        <input type="number" id="seekSeconds" min="5" max="60" step="5" value="30">
+        Seek Time (seconds)
+      </label>
     </div>
-    <div class="shortcut">
-      <div class="shortcut__control">
-        <span class="key key--arrow">⬇</span>
+  </section>
+
+  <section>
+    <h2>Keyboard Shortcuts</h2>
+    <dl class="shortcuts">
+      <div>
+        <dt><kbd>Space</kbd></dt>
+        <dd>Play/Pause</dd>
       </div>
-      <span class="shortcut__label">Next Track</span>
-    </div>
-    <div class="shortcut">
-      <div class="shortcut__control">
-        <span class="key key--arrow">⬆</span>
+      <div>
+        <dt><kbd>↓</kbd></dt>
+        <dd>Next Track</dd>
       </div>
-      <span class="shortcut__label">Previous Track</span>
-    </div>
-    <div class="shortcut">
-      <div class="shortcut__control">
-        <span class="key key--arrow">⮕</span>
+      <div>
+        <dt><kbd>↑</kbd></dt>
+        <dd>Previous Track</dd>
       </div>
-      <span class="shortcut__label">Fast Forward</span>
-    </div>
-    <div class="shortcut">
-      <div class="shortcut__control">
-        <span class="key key--arrow">⬅</span>
+      <div>
+        <dt><kbd>→</kbd></dt>
+        <dd>Fast Forward</dd>
       </div>
-      <span class="shortcut__label">Rewind</span>
-    </div>
-  </div>
+      <div>
+        <dt><kbd>←</kbd></dt>
+        <dd>Rewind</dd>
+      </div>
+    </dl>
+  </section>
   
-  <div class="popup__footer">
-    <div class="popup__disclaimer">This extension is not affiliated with Bandcamp or Epic Games.</div>
-  </div>
+  <footer>
+    <small>This extension is not affiliated with Bandcamp or Epic Games.</small>
+  </footer>
 </body>
 </html>
