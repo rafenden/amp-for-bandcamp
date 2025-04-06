@@ -8,82 +8,82 @@
   <script src="../../vendor/browser-polyfill.min.js"></script>
   <script src="popup.js" defer></script>
 </head>
-<body>
-  <h1>Bandcamp Tuned</h1>
+<body class="popup">
+  <h1 class="popup__title">Bandcamp Tuned</h1>
   
   <div class="section">
-    <div class="section-title">Settings</div>
+    <div class="section__title">Settings</div>
     <div class="toggle">
-      <div class="control-column">
-        <label class="toggle-switch">
-          <input type="checkbox" id="stickyPlayer" checked>
-          <span class="toggle-slider"></span>
+      <div class="toggle__control">
+        <label class="switch">
+          <input class="switch__input" type="checkbox" id="stickyPlayer" checked>
+          <span class="switch__slider"></span>
         </label>
       </div>
-      <label for="stickyPlayer" class="setting-label">Sticky Player on Album Page</label>
+      <label class="toggle__label" for="stickyPlayer">Sticky Player on Album Page</label>
     </div>
     <div class="toggle">
-      <div class="control-column">
-        <label class="toggle-switch">
-          <input type="checkbox" id="autoPlayNext" checked>
-          <span class="toggle-slider"></span>
+      <div class="toggle__control">
+        <label class="switch">
+          <input class="switch__input" type="checkbox" id="autoPlayNext" checked>
+          <span class="switch__slider"></span>
         </label>
       </div>
-      <label for="autoPlayNext" class="setting-label">Auto Play Next Track</label>
+      <label class="toggle__label" for="autoPlayNext">Auto Play Next Track</label>
     </div>
     <div class="toggle">
-      <div class="control-column">
-        <label class="toggle-switch">
-          <input type="checkbox" id="showLeaveWarning" checked>
-          <span class="toggle-slider"></span>
+      <div class="toggle__control">
+        <label class="switch">
+          <input class="switch__input" type="checkbox" id="showLeaveWarning" checked>
+          <span class="switch__slider"></span>
         </label>
       </div>
-      <label for="showLeaveWarning" class="setting-label">Show Leave Warning When Playing</label>
+      <label class="toggle__label" for="showLeaveWarning">Show Leave Warning When Playing</label>
     </div>
     <div class="setting">
-      <div class="control-column">
-        <input type="number" id="seekSeconds" min="5" max="60" step="5" value="30" class="seek-input">
+      <div class="setting__control">
+        <input class="setting__input" type="number" id="seekSeconds" min="5" max="60" step="5" value="30">
       </div>
-      <label for="seekSeconds" class="setting-label">Seek Time (seconds)</label>
+      <label class="setting__label" for="seekSeconds">Seek Time (seconds)</label>
     </div>
   </div>
 
   <div class="section">
-    <div class="section-title">Keyboard Shortcuts</div>
+    <div class="section__title">Keyboard Shortcuts</div>
     <div class="shortcut">
-      <div class="control-column">
+      <div class="shortcut__control">
         <span class="key key--space">Space</span>
       </div>
-      <span class="shortcut-label">Play/Pause</span>
+      <span class="shortcut__label">Play/Pause</span>
     </div>
     <div class="shortcut">
-      <div class="control-column">
-        <span class="key">⬇</span>
+      <div class="shortcut__control">
+        <span class="key key--arrow">⬇</span>
       </div>
-      <span class="shortcut-label">Next Track</span>
+      <span class="shortcut__label">Next Track</span>
     </div>
     <div class="shortcut">
-      <div class="control-column">
-        <span class="key">⬆</span>
+      <div class="shortcut__control">
+        <span class="key key--arrow">⬆</span>
       </div>
-      <span class="shortcut-label">Previous Track</span>
+      <span class="shortcut__label">Previous Track</span>
     </div>
     <div class="shortcut">
-      <div class="control-column">
-        <span class="key">⮕</span>
+      <div class="shortcut__control">
+        <span class="key key--arrow">⮕</span>
       </div>
-      <span class="shortcut-label">Fast Forward</span>
+      <span class="shortcut__label">Fast Forward</span>
     </div>
     <div class="shortcut">
-      <div class="control-column">
-        <span class="key">⬅</span>
+      <div class="shortcut__control">
+        <span class="key key--arrow">⬅</span>
       </div>
-      <span class="shortcut-label">Rewind</span>
+      <span class="shortcut__label">Rewind</span>
     </div>
   </div>
   
-  <div class="footer">
-    <div class="disclaimer">This extension is not affiliated with Bandcamp or Epic Games.</div>
+  <div class="popup__footer">
+    <div class="popup__disclaimer">This extension is not affiliated with Bandcamp or Epic Games.</div>
   </div>
 </body>
 </html>
