@@ -14,53 +14,71 @@
   <div class="section">
     <div class="section-title">Settings</div>
     <div class="toggle">
-      <span>Sticky Player on Album Page</span>
-      <label class="toggle-switch">
-        <input type="checkbox" id="stickyPlayer" checked>
-        <span class="toggle-slider"></span>
-      </label>
+      <div class="control-column">
+        <label class="toggle-switch">
+          <input type="checkbox" id="stickyPlayer" checked>
+          <span class="toggle-slider"></span>
+        </label>
+      </div>
+      <label for="stickyPlayer" class="setting-label">Sticky Player on Album Page</label>
     </div>
     <div class="toggle">
-      <span>Auto Play Next Track</span>
-      <label class="toggle-switch">
-        <input type="checkbox" id="autoPlayNext" checked>
-        <span class="toggle-slider"></span>
-      </label>
+      <div class="control-column">
+        <label class="toggle-switch">
+          <input type="checkbox" id="autoPlayNext" checked>
+          <span class="toggle-slider"></span>
+        </label>
+      </div>
+      <label for="autoPlayNext" class="setting-label">Auto Play Next Track</label>
     </div>
     <div class="toggle">
-      <span>Show Leave Warning When Playing</span>
-      <label class="toggle-switch">
-        <input type="checkbox" id="showLeaveWarning" checked>
-        <span class="toggle-slider"></span>
-      </label>
+      <div class="control-column">
+        <label class="toggle-switch">
+          <input type="checkbox" id="showLeaveWarning" checked>
+          <span class="toggle-slider"></span>
+        </label>
+      </div>
+      <label for="showLeaveWarning" class="setting-label">Show Leave Warning When Playing</label>
     </div>
     <div class="setting">
-      <span>Seek Time (seconds)</span>
-      <input type="number" id="seekSeconds" min="5" max="60" step="5" value="30" class="seek-input">
+      <div class="control-column">
+        <input type="number" id="seekSeconds" min="5" max="60" step="5" value="30" class="seek-input">
+      </div>
+      <label for="seekSeconds" class="setting-label">Seek Time (seconds)</label>
     </div>
   </div>
 
   <div class="section">
     <div class="section-title">Keyboard Shortcuts</div>
     <div class="shortcut">
-      <span>Play/Pause</span>
-      <span class="key">Space</span>
+      <div class="control-column">
+        <span class="key key--space">Space</span>
+      </div>
+      <span class="shortcut-label">Play/Pause</span>
     </div>
     <div class="shortcut">
-      <span>Next Track</span>
-      <span class="key">↓</span>
+      <div class="control-column">
+        <span class="key">⬇</span>
+      </div>
+      <span class="shortcut-label">Next Track</span>
     </div>
     <div class="shortcut">
-      <span>Previous Track</span>
-      <span class="key">↑</span>
+      <div class="control-column">
+        <span class="key">⬆</span>
+      </div>
+      <span class="shortcut-label">Previous Track</span>
     </div>
     <div class="shortcut">
-      <span>Fast Forward</span>
-      <span class="key">→</span>
+      <div class="control-column">
+        <span class="key">⮕</span>
+      </div>
+      <span class="shortcut-label">Fast Forward</span>
     </div>
     <div class="shortcut">
-      <span>Rewind</span>
-      <span class="key">←</span>
+      <div class="control-column">
+        <span class="key">⬅</span>
+      </div>
+      <span class="shortcut-label">Rewind</span>
     </div>
   </div>
   

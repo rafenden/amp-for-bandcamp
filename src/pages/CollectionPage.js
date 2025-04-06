@@ -13,12 +13,20 @@ class CollectionPage extends BasePage {
   }
 
   clickShowMore() {
-    setInterval(() => {
-      const remainingButtons = document.querySelectorAll('.show-more');
-      if (remainingButtons.length > 0) {
-        Array.from(remainingButtons).forEach(button => button.click());
+    const clickButtons = () => {
+      const buttons = document.querySelectorAll('.show-more');
+      if (buttons.length) {
+        Array.from(buttons).forEach(btn => btn.click());
       }
-    }, 3000);
+    };
+
+    clickButtons();
+
+    const observer = new MutationObserver(clickButtons);
+    observer.observe(document.querySelector('.collection-container'), {
+      childList: true,
+      subtree: true
+    });
   }
 
   togglePlayPause() {
