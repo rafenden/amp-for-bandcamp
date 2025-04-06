@@ -17,7 +17,7 @@
   },
   "scripts": {
     "build:zip": "zip -r dist/bandcamp-tuned.zip manifest.json src/ vendor/ icons/",
-    "build:safari": "mkdir -p dist/build && xcodebuild -project \"xcode/Bandcamp Tuned.xcodeproj\" -scheme \"Bandcamp Tuned (macOS)\" -configuration Release -derivedDataPath dist/safari build",
+    "build:safari": "xcodebuild -project \"xcode/Bandcamp Tuned.xcodeproj\" -scheme \"Bandcamp Tuned (macOS)\" -configuration Release -derivedDataPath dist/safari build",
     "build": "npm run build:zip && npm run build:safari"
   }
 }

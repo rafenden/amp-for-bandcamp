@@ -4,6 +4,7 @@ class BasePage {
     this.settings = {
       stickyPlayer: true,
       autoPlayNext: true,
+      showLeaveWarning: true,
       seekSeconds: 30,
       ...settings
     };
@@ -137,7 +138,7 @@ class BasePage {
   setupPageLeaveWarning() {
     window.onbeforeunload = (e) => {
       const audio = document.querySelector('audio');
-      if (audio && !audio.paused) {
+      if (this.settings.showLeaveWarning && audio && !audio.paused) {
         e.preventDefault();
         e.returnValue = '';
         return '';
