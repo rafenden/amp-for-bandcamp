@@ -1,4 +1,3 @@
-
 class CollectionPage extends BasePage {
   constructor(settings = {}) {
     super(settings);
@@ -6,10 +5,20 @@ class CollectionPage extends BasePage {
 
   init() {
     super.init();
+    this.clickShowMore();
   }
 
   static isMatch() {
     return !!document.querySelector('.collection-container');
+  }
+
+  clickShowMore() {
+    setInterval(() => {
+      const remainingButtons = document.querySelectorAll('.show-more');
+      if (remainingButtons.length > 0) {
+        Array.from(remainingButtons).forEach(button => button.click());
+      }
+    }, 3000);
   }
 
   togglePlayPause() {
