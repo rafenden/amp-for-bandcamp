@@ -1,8 +1,4 @@
 function init() {
-  if (typeof browser === 'undefined' && typeof chrome !== 'undefined') {
-    window.browser = chrome;
-  }
-
   loadSettings().then(settings => {
     if (AlbumPage.isMatch()) {
       const page = new AlbumPage(settings);

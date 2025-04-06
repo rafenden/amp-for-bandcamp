@@ -1,11 +1,3 @@
-// Make sure browser is defined
-if (typeof browser === 'undefined' && typeof chrome !== 'undefined') {
-  window.browser = chrome;
-}
-
-// Use chrome API if available, otherwise use browser API
-const storage = chrome?.storage?.sync || browser?.storage?.sync;
-
 const stickyPlayerToggle = document.getElementById('stickyPlayer');
 const autoPlayNextToggle = document.getElementById('autoPlayNext');
 const showLeaveWarningToggle = document.getElementById('showLeaveWarning');

@@ -24,11 +24,6 @@ class BasePage {
   }
 
   setupSettingsListeners() {
-    // Make sure browser is defined
-    if (typeof browser === 'undefined' && typeof chrome !== 'undefined') {
-      window.browser = chrome;
-    }
-
     try {
       browser.storage.onChanged.addListener((changes, namespace) => {
         if (namespace === 'sync') {
