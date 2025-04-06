@@ -1,11 +1,5 @@
-// Use chrome API if browser API is not available
-if (typeof browser === 'undefined') {
-  window.browser = chrome;
-}
-
 class BasePage {
   constructor(settings = {}) {
-    this.id = 'bandcamp-tuned-base-page';
     this.settings = {
       stickyPlayer: true,
       autoPlayNext: true,
@@ -13,53 +7,20 @@ class BasePage {
       seekSeconds: 30,
       ...settings
     };
-    this.audioElement = null;
-    this.beforeUnloadHandler = null;
   }
   
   init() {
-    this.setupControls();
-    this.setupPageLeaveWarning();
-
-    if (this.settings.autoPlayNext) {
-      this.setupAutoPlayNext();
-    }
-
+    this.setupKeyboardShortcuts();
     this.setupSettingsListeners();
-  }
-
-  setupSettingsListeners() {
-    try {
-      browser.storage.onChanged.addListener((changes, namespace) => {
-        if (namespace === 'sync') {
-          console.log('Settings changed:', changes);
-          
-          for (let key in changes) {
-            this.settings[key] = changes[key].newValue;
-          }
-
-          this.applySettingsChanges(changes);
-        }
-      });
-    } catch (error) {
-      console.error('Error setting up settings listener:', error);
-    }
-  }
-
-  applySettingsChanges(changes) {
-
-    if (changes.autoPlayNext) {
-      if (changes.autoPlayNext.newValue) {
-        this.setupAutoPlayNext();
-      }
-    }
+    this.setupAutoPlayNext();
+    this.setupPageLeaveWarning();
   }
 
   static isMatch() {
     return false;
   }
 
-  setupControls() {
+  setupKeyboardShortcuts() {
     document.addEventListener('keydown', (e) => {
 
       if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') {
@@ -100,15 +61,6 @@ class BasePage {
     });
   }
 
-  setupAutoPlayNext() {
-    setInterval(() => {
-      const audio = document.querySelector('audio');
-      if (audio && audio.duration - audio.currentTime <= 1) {
-        this.nextSong();
-      }
-    }, 1000);
-  }
-
   fastForward() {
     const audio = document.querySelector('audio');
     const seekTime = this.settings.seekSeconds;
@@ -135,20 +87,59 @@ class BasePage {
 
   prevSong() {}
 
+  setupSettingsListeners() {
+    try {
+      browser.storage.onChanged.addListener((changes, namespace) => {
+        if (namespace === 'sync') {
+          for (let key in changes) {
+            this.settings[key] = changes[key].newValue;
+          }
+
+          this.applySettingsChanges(changes);
+        }
+      });
+    } catch (error) {
+      console.error('Error setting up settings listener:', error);
+    }
+  }
+
+  applySettingsChanges(changes) {
+    if (changes.autoPlayNext && changes.autoPlayNext.newValue) {
+      this.setupAutoPlayNext();
+    }
+
+    if (changes.showLeaveWarning && changes.showLeaveWarning.newValue) {
+      this.setupPageLeaveWarning();
+    }
+  }
+
+  setupAutoPlayNext() {
+    if (!this.settings.autoPlayNext) {
+      return;
+    }
+
+    setInterval(() => {
+      const audio = document.querySelector('audio');
+      if (audio && audio.duration - audio.currentTime <= 1) {
+        this.nextSong();
+      }
+    }, 1000);
+  }
+
   setupPageLeaveWarning() {
     const handler = (e) => {
       const audio = document.querySelector('audio');
-      if (this.settings.showLeaveWarning && audio && !audio.paused) {
-        // Modern browsers
-        e.preventDefault();
-        // Legacy browsers
-        e.returnValue = '';
-        return '';
+      if (audio && !audio.paused) {
+        const message = 'Music is still playing. Are you sure you want to leave?';
+        e.returnValue = message;
+        return message;
       }
     };
 
-    // Add both modern and legacy event listeners
-    window.addEventListener('beforeunload', handler);
-    window.onbeforeunload = handler;
+    if (!this.settings.showLeaveWarning) {
+      window.removeEventListener('beforeunload', handler);
+    } else {
+      window.addEventListener('beforeunload', handler);
+    }
   }
 }
