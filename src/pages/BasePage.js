@@ -135,45 +135,13 @@ class BasePage {
   prevSong() {}
 
   setupPageLeaveWarning() {
-    // Store the handler reference so we can remove it later
-    this.beforeUnloadHandler = (e) => {
-      // Get the audio element if we don't have it
-      if (!this.audioElement) {
-        this.audioElement = document.querySelector('audio');
-      }
-      
-      if (this.audioElement && !this.audioElement.paused) {
+    window.onbeforeunload = (e) => {
+      const audio = document.querySelector('audio');
+      if (audio && !audio.paused) {
         e.preventDefault();
         e.returnValue = '';
-        return 'Are you sure you want to leave? Music is still playing.';
+        return '';
       }
     };
-
-    // Add the event listener
-    window.addEventListener('beforeunload', this.beforeUnloadHandler);
-
-    // Set up a MutationObserver to watch for audio element changes
-    const observer = new MutationObserver((mutations) => {
-      mutations.forEach((mutation) => {
-        if (mutation.addedNodes.length) {
-          const audio = document.querySelector('audio');
-          if (audio) {
-            this.audioElement = audio;
-          }
-        }
-      });
-    });
-
-    // Start observing the document body for changes
-    observer.observe(document.body, {
-      childList: true,
-      subtree: true
-    });
-
-    // Clean up when the page is unloaded
-    window.addEventListener('unload', () => {
-      window.removeEventListener('beforeunload', this.beforeUnloadHandler);
-      observer.disconnect();
-    });
   }
 }
