@@ -1,12 +1,12 @@
 class FeedPage extends BasePage {
   constructor(settings = {}) {
     super(settings);
-    this.progressBarContainer = null; // To keep track of the current progress bar
+    this.progressBarContainer = null;
   }
 
   init() {
     super.init();
-    // Setup progress bar - moved from BasePage
+
     if (this.settings.showProgressBar) {
       this.setupProgressBar();
     }
@@ -51,84 +51,52 @@ class FeedPage extends BasePage {
     const audio = document.querySelector('audio');
     if (!audio) return;
 
-    const createOrUpdateProgressBar = (target) => {
+    const updateProgressBar = () => {
+      if (!this.settings.showProgressBar) {
+        if (this.progressBarContainer) {
+          this.progressBarContainer.style.display = 'none';
+        }
+        return;
+      }
+      
+      const target = document.querySelector('.collection-item-container.playing');
+      
       if (!target) return;
       
-      // Remove existing progress bar if it's in a different container
-      if (this.progressBarContainer && this.progressBarContainer.parentElement !== target) {
-        this.progressBarContainer.remove();
-        this.progressBarContainer = null;
-      }
-
-      // Create progress bar if needed
-      if (!this.progressBarContainer) {
+      if (!this.progressBarContainer || this.progressBarContainer.parentElement !== target) {
+        if (this.progressBarContainer) this.progressBarContainer.remove();
+        
         this.progressBarContainer = document.createElement('div');
         this.progressBarContainer.className = 'playback-progress';
-        this.progressBarContainer.style.display = 'block';
+        this.progressBarContainer.innerHTML = '<div class="playback-progress-inner"></div>';
         
-        const innerBar = document.createElement('div');
-        innerBar.className = 'playback-progress-inner';
-        this.progressBarContainer.appendChild(innerBar);
-        
-        // Append to appropriate container
-        const container = target.querySelector('.story-body') || target;
-        container.appendChild(this.progressBarContainer);
+        (target.querySelector('.story-body') || target).appendChild(this.progressBarContainer);
       }
       
-      // Ensure visibility and update
-      this.progressBarContainer.style.display = 'block';
-      updateProgress();
-    };
-
-    const updateProgress = () => {
-      if (audio.duration && this.progressBarContainer) {
-        const progress = (audio.currentTime / audio.duration) * 100;
+      if (audio.duration) {
         const innerBar = this.progressBarContainer.querySelector('.playback-progress-inner');
-        if (innerBar) innerBar.style.width = `${progress}%`;
+        innerBar.style.width = `${(audio.currentTime / audio.duration) * 100}%`;
       }
+      
+      this.progressBarContainer.style.display = 'block';
     };
-
-    const findPlayingContainer = () => {
-      return document.querySelector('.collection-item-container.playing, .story-innards.playing') || 
-             document.querySelector('.track_play_hilite.playing')?.closest('.collection-item-container, .story-innards') ||
-             document.querySelector('[data-playing="true"]')?.closest('.collection-item-container, .story-innards');
-    };
-
-    // Event Listeners
-    audio.addEventListener('play', () => {
-      const container = findPlayingContainer();
-      if (container) createOrUpdateProgressBar(container);
-    });
-
-    audio.addEventListener('pause', updateProgress);
-    audio.addEventListener('timeupdate', updateProgress);
+  
+    audio.addEventListener('play', updateProgressBar);
+    audio.addEventListener('pause', updateProgressBar);
+    audio.addEventListener('timeupdate', updateProgressBar);
     audio.addEventListener('ended', () => {
       if (this.progressBarContainer) this.progressBarContainer.style.display = 'none';
     });
-     
-    // Initial check for already playing audio
-    if (!audio.paused) {
-      const container = findPlayingContainer();
-      if (container) createOrUpdateProgressBar(container);
-    }
+    
+    if (!audio.paused) updateProgressBar();
   }
   
-  // Override applySettingsChanges to handle progress bar setting
   applySettingsChanges(changes) {
     super.applySettingsChanges(changes);
     
-    // Handle progress bar setting specifically for feed page
     if (changes.showProgressBar !== undefined) {
       if (changes.showProgressBar.newValue) {
-        // Re-enable progress bar
         this.setupProgressBar();
-      } else {
-        // Hide and remove progress bar if it exists
-        if (this.progressBarContainer) {
-          this.progressBarContainer.remove();
-          this.progressBarContainer = null;
-          console.log("Bandcamp Tuned: Removed progress bar due to setting change");
-        }
       }
     }
   }

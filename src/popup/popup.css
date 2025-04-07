@@ -124,6 +124,10 @@ kbd {
   line-height: 1;
 }
 
+kbd.spacebar {
+  font-size: 11px;
+}
+
 footer {
   font-size: 11px;
   color: #777;

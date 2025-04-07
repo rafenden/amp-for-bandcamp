@@ -28,7 +28,6 @@ class BasePage {
         return;
       }
 
-      // Handle key presses by key code
       switch (e.code) {
         case 'Space':
           e.preventDefault();

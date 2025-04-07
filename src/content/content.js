@@ -2,7 +2,8 @@ const DEFAULT_SETTINGS = {
   stickyPlayer: true,
   autoPlayNext: true,
   seekSeconds: 30,
-  showLeaveWarning: true
+  showLeaveWarning: true,
+  showProgressBar: true
 };
 
 function init() {
