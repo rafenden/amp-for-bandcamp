@@ -5,32 +5,13 @@ async function init() {
     const { CollectionPage } = await import('../content-pages/CollectionPage.js');
     const { FeedPage } = await import('../content-pages/FeedPage.js');
     
-    loadSettings().then(settings => {
-      if (AlbumPage.isMatch()) {
-        const page = new AlbumPage(settings);
-        page.init();
-  
-      } else if (CollectionPage.isMatch()) {
-        const page = new CollectionPage(settings);
-        page.init();
-  
-      } else if (FeedPage.isMatch()) {
-        const page = new FeedPage(settings);
-        page.init();
-  
-      } else {}
-    });
-    
-    function loadSettings() {
-      try {
-        return browser.storage.sync.get(DEFAULT_SETTINGS).catch(error => {
-          console.error('Error loading settings:', error);
-          return DEFAULT_SETTINGS;
-        });
-      } catch (error) {
-        console.error('Exception loading settings:', error);
-        return DEFAULT_SETTINGS;
-      }
+    const settings = await browser.storage.sync.get(DEFAULT_SETTINGS);
+    if (AlbumPage.isMatch()) {
+      new AlbumPage(settings).init();
+    } else if (CollectionPage.isMatch()) {
+      new CollectionPage(settings).init();
+    } else if (FeedPage.isMatch()) {
+      new FeedPage(settings).init();
     }
   } catch (error) {
     console.error('Error initializing extension:', error);

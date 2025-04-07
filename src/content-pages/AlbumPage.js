@@ -32,17 +32,19 @@ export class AlbumPage extends BasePage {
   }
 
   setupStickyPlayer() {
-    console.log('Setting sticky player');
     const player = document.querySelector('.inline_player');
-
-    if (!this.settings.stickyPlayer) {
-      console.log('Not sticky');
-      player.style.position = 'block';
+    if (!player) {
       return;
     }
 
-    if (player && player.style.position !== 'sticky' && this.settings.stickyPlayer) {
-      console.log('Sticky');
+    if (!this.settings.stickyPlayer) {
+      player.style.position = '';
+      player.style.top = '';
+      player.style.zIndex = '';
+      return;
+    }
+
+    if (this.settings.stickyPlayer) {
       player.style.position = 'sticky';
       player.style.top = '55px';
       player.style.zIndex = 1000;           

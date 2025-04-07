@@ -13,3 +13,9 @@
   width: 0%;
   transition: width 0.1s linear;
 }
+
+.sticky {
+  position: fixed;
+  top: 55px;
+  z-index: 1000;
+}

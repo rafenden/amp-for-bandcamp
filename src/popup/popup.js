@@ -13,32 +13,32 @@ document.addEventListener('DOMContentLoaded', () => {
     showLeaveWarningToggle.checked = items.showLeaveWarning;
     showProgressBarToggle.checked = items.showProgressBar;
     seekSecondsInput.value = items.seekSeconds;
-  }).catch(() => {});
+  }).catch(console.error);
 });
 
 stickyPlayerToggle.addEventListener('change', () => {
   browser.storage.sync.set({ stickyPlayer: stickyPlayerToggle.checked })
-    .catch(() => {});
+    .catch(console.error);
 });
 
 autoPlayNextToggle.addEventListener('change', () => {
   browser.storage.sync.set({ autoPlayNext: autoPlayNextToggle.checked })
-    .catch(() => {});
+    .catch(console.error);
 });
 
 showLeaveWarningToggle.addEventListener('change', () => {
   browser.storage.sync.set({ showLeaveWarning: showLeaveWarningToggle.checked })
-    .catch(() => {});
+    .catch(console.error);
 });
 
 showProgressBarToggle.addEventListener('change', () => {
   browser.storage.sync.set({ showProgressBar: showProgressBarToggle.checked })
-    .catch(() => {});
+    .catch(console.error);
 });
 
 seekSecondsInput.addEventListener('change', () => {
   const value = Math.min(Math.max(parseInt(seekSecondsInput.value) || 30, 5), 60);
   seekSecondsInput.value = value;
   browser.storage.sync.set({ seekSeconds: value })
-    .catch(() => {});
+    .catch(console.error);
 });
