@@ -16,7 +16,7 @@ import SafariServices
 typealias PlatformViewController = NSViewController
 #endif
 
-let extensionBundleIdentifier = "com.yourCompany.Bandcamp-Tuned.Extension"
+let extensionBundleIdentifier = "com.enden.Bandcamp-Tuned.Extension"
 
 class ViewController: PlatformViewController, WKNavigationDelegate, WKScriptMessageHandler {
 
