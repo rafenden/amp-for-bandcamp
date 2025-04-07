@@ -1,4 +1,3 @@
-
 class FeedPage extends BasePage {
   constructor(settings = {}) {
     super(settings);
@@ -13,7 +12,18 @@ class FeedPage extends BasePage {
   }
 
   togglePlayPause() {
-    document.querySelector('.track_play_hilite.playing .tralbum-art-large, .track_play_hilite.paused:last-child .tralbum-art-large, .track_play_hilite .tralbum-art-large')?.click();
+    const playingTrack = document.querySelector('.track_play_hilite.playing .tralbum-art-large');
+    if (playingTrack) {
+      playingTrack.click();
+    } else {
+      const pausedTracks = document.querySelectorAll('.track_play_hilite.paused .tralbum-art-large');
+      if (pausedTracks.length > 0) {
+        pausedTracks[pausedTracks.length - 1].click();
+      } else {
+        const firstTrack = document.querySelectorAll('.track_play_hilite .tralbum-art-large')[0];
+        firstTrack?.click();
+      }
+    }
   }
 
   nextSong() {
@@ -25,7 +35,7 @@ class FeedPage extends BasePage {
   }
 
   prevSong() {
-    const prevTrack = document.querySelector('.collection-item-container.playing')?.parentElement?.prevElementSibling?.querySelector('.tralbum-art-large');
+    const prevTrack = document.querySelector('.collection-item-container.playing')?.parentElement?.previousElementSibling?.querySelector('.tralbum-art-large');
     if (prevTrack) {
       prevTrack.click();
       prevTrack.scrollIntoView({ behavior: 'smooth', block: 'center' });

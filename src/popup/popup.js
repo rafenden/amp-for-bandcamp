@@ -16,6 +16,27 @@ document.addEventListener('DOMContentLoaded', () => {
     showLeaveWarningToggle.checked = items.showLeaveWarning;
     seekSecondsInput.value = items.seekSeconds;
   }).catch(() => {});
+
+  // Find and play the last paused track
+  const pausedTracks = document.querySelectorAll('.story-innards.paused');
+  const lastPausedTrack = pausedTracks.length > 0 ? pausedTracks[pausedTracks.length - 1] : null;
+  
+  if (lastPausedTrack) {
+    const trackId = lastPausedTrack.dataset.trackid;
+    const trackUrl = lastPausedTrack.querySelector('.item-link').href;
+    
+    // Send message to content script to play the track
+    browser.tabs.query({ active: true, currentWindow: true }).then(tabs => {
+      browser.tabs.sendMessage(tabs[0].id, {
+        action: 'playTrack',
+        trackId: trackId,
+        trackUrl: trackUrl
+      });
+    }).catch(() => {});
+
+    // Update UI to show track is playing
+    lastPausedTrack.classList.remove('paused');
+  }
 });
 
 stickyPlayerToggle.addEventListener('change', () => {
