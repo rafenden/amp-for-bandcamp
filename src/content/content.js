@@ -1,3 +1,10 @@
+const DEFAULT_SETTINGS = {
+  stickyPlayer: true,
+  autoPlayNext: true,
+  seekSeconds: 30,
+  showLeaveWarning: true
+};
+
 function init() {
   loadSettings().then(settings => {
     if (AlbumPage.isMatch()) {
@@ -18,25 +25,13 @@ function init() {
 
 function loadSettings() {
   try {
-    return browser.storage.sync.get({
-      stickyPlayer: true,
-      autoPlayNext: true,
-      seekSeconds: 30
-    }).catch(error => {
+    return browser.storage.sync.get(DEFAULT_SETTINGS).catch(error => {
       console.error('Error loading settings:', error);
-      return {
-        stickyPlayer: true,
-        autoPlayNext: true,
-        seekSeconds: 30
-      };
+      return DEFAULT_SETTINGS;
     });
   } catch (error) {
     console.error('Exception loading settings:', error);
-    return Promise.resolve({
-      stickyPlayer: true,
-      autoPlayNext: true,
-      seekSeconds: 30
-    });
+    return DEFAULT_SETTINGS;
   }
 }
 

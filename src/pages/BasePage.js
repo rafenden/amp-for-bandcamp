@@ -136,9 +136,8 @@ class BasePage {
       }
     };
 
-    if (!this.settings.showLeaveWarning) {
-      window.removeEventListener('beforeunload', handler);
-    } else {
+    window.removeEventListener('beforeunload', handler);
+    if (this.settings.showLeaveWarning) {
       window.addEventListener('beforeunload', handler);
     }
   }
