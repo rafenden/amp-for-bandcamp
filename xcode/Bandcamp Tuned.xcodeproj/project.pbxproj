@@ -663,7 +663,7 @@
 					"-framework",
 					SafariServices,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.yourCompany.Bandcamp-Tuned.Extension";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.enden.Bandcamp-Tuned.Extension";
 				PRODUCT_NAME = "Bandcamp Tuned Extension";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -693,7 +693,7 @@
 					"-framework",
 					SafariServices,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.yourCompany.Bandcamp-Tuned.Extension";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.enden.Bandcamp-Tuned.Extension";
 				PRODUCT_NAME = "Bandcamp Tuned Extension";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -731,7 +731,7 @@
 					"-framework",
 					WebKit,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.yourCompany.Bandcamp-Tuned";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.enden.Bandcamp-Tuned";
 				PRODUCT_NAME = "Bandcamp Tuned";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -767,7 +767,7 @@
 					"-framework",
 					WebKit,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.yourCompany.Bandcamp-Tuned";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.enden.Bandcamp-Tuned";
 				PRODUCT_NAME = "Bandcamp Tuned";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -799,7 +799,7 @@
 					"-framework",
 					SafariServices,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.yourCompany.Bandcamp-Tuned.Extension";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.enden.Bandcamp-Tuned.Extension";
 				PRODUCT_NAME = "Bandcamp Tuned Extension";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -830,7 +830,7 @@
 					"-framework",
 					SafariServices,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.yourCompany.Bandcamp-Tuned.Extension";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.enden.Bandcamp-Tuned.Extension";
 				PRODUCT_NAME = "Bandcamp Tuned Extension";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -865,7 +865,7 @@
 					"-framework",
 					WebKit,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.yourCompany.Bandcamp-Tuned";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.enden.Bandcamp-Tuned";
 				PRODUCT_NAME = "Bandcamp Tuned";
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -899,7 +899,7 @@
 					"-framework",
 					WebKit,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.yourCompany.Bandcamp-Tuned";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.enden.Bandcamp-Tuned";
 				PRODUCT_NAME = "Bandcamp Tuned";
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;

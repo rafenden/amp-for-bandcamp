@@ -8,6 +8,8 @@ class BasePage {
       seekSeconds: 30,
       ...settings
     };
+    this.autoPlayInterval = null;
+    this.pageLeaveHandler = null;
   }
   
   init() {
@@ -23,7 +25,6 @@ class BasePage {
 
   setupKeyboardShortcuts() {
     document.addEventListener('keydown', (e) => {
-
       if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') {
         return;
       }
@@ -94,7 +95,6 @@ class BasePage {
           for (let key in changes) {
             this.settings[key] = changes[key].newValue;
           }
-
           this.applySettingsChanges(changes);
         }
       });
@@ -104,21 +104,24 @@ class BasePage {
   }
 
   applySettingsChanges(changes) {
-    if (changes.autoPlayNext && changes.autoPlayNext.newValue) {
+    if (changes.autoPlayNext !== undefined) {
       this.setupAutoPlayNext();
     }
-
-    if (changes.showLeaveWarning && changes.showLeaveWarning.newValue) {
+    if (changes.showLeaveWarning !== undefined) {
       this.setupPageLeaveWarning();
     }
   }
 
   setupAutoPlayNext() {
+    if (this.autoPlayInterval) {
+      clearInterval(this.autoPlayInterval);
+    }
+
     if (!this.settings.autoPlayNext) {
       return;
     }
 
-    setInterval(() => {
+    this.autoPlayInterval = setInterval(() => {
       const audio = document.querySelector('audio');
       if (audio && audio.duration - audio.currentTime <= 1) {
         this.nextSong();
@@ -127,18 +130,20 @@ class BasePage {
   }
 
   setupPageLeaveWarning() {
-    const handler = (e) => {
-      const audio = document.querySelector('audio');
-      if (audio && !audio.paused) {
-        const message = 'Music is still playing. Are you sure you want to leave?';
-        e.returnValue = message;
-        return message;
-      }
-    };
+    if (this.pageLeaveHandler) {
+      window.removeEventListener('beforeunload', this.pageLeaveHandler);
+    }
 
-    window.removeEventListener('beforeunload', handler);
     if (this.settings.showLeaveWarning) {
-      window.addEventListener('beforeunload', handler);
+      this.pageLeaveHandler = (e) => {
+        const audio = document.querySelector('audio');
+        if (audio && !audio.paused) {
+          const message = 'Music is still playing. Are you sure you want to leave?';
+          e.returnValue = message;
+          return message;
+        }
+      };
+      window.addEventListener('beforeunload', this.pageLeaveHandler);
     }
   }
 }

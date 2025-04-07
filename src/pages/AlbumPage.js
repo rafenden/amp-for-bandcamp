@@ -16,6 +16,10 @@ class AlbumPage extends BasePage {
     return !!document.querySelector('.inline_player');
   }
 
+  setupAutoPlayNext() {
+    // Disable auto-play on album pages as Bandcamp has it's own auto-play
+  }
+
   applySettingsChanges(changes) {
     super.applySettingsChanges(changes);
 
@@ -55,7 +59,7 @@ class AlbumPage extends BasePage {
             player.style.backgroundColor = `#${designData.body_color}`;
           }
         } catch (e) {
-          // Error handling
+          console.error('Error parsing design data:', e);
         }
       }
     }
