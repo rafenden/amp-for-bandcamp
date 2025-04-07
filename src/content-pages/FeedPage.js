@@ -9,9 +9,7 @@ export class FeedPage extends BasePage {
   init() {
     super.init();
 
-    if (this.settings.showProgressBar) {
-      this.setupProgressBar();
-    }
+    this.setupProgressBar();
   }
 
   static isMatch() {
@@ -50,6 +48,10 @@ export class FeedPage extends BasePage {
   }
 
   setupProgressBar() {
+    if (!this.settings.showProgressBar) {
+      return;
+    }
+
     const audio = document.querySelector('audio');
     if (!audio) return;
 
@@ -97,9 +99,7 @@ export class FeedPage extends BasePage {
     super.applySettingsChanges(changes);
     
     if (changes.showProgressBar !== undefined) {
-      if (changes.showProgressBar.newValue) {
-        this.setupProgressBar();
-      }
+      this.setupProgressBar();
     }
   }
 }

@@ -8,9 +8,7 @@ export class AlbumPage extends BasePage {
   init() {
     super.init();
     
-    if (this.settings.stickyPlayer) {
-      this.makePlayerSticky();
-    }
+    this.setupStickyPlayer(); 
   }
 
   static isMatch() {
@@ -18,25 +16,14 @@ export class AlbumPage extends BasePage {
   }
 
   setupAutoPlayNext() {
-    // Disable autm pages as Bandcamp has it's own auto-play
+    // Disable on album pages as Bandcamp has it's own auto-play
   }
 
   applySettingsChanges(changes) {
     super.applySettingsChanges(changes);
-
-    if (changes.stickyPlayer) {
-      if (changes.stickyPlayer.newValue) {
-        this.makePlayerSticky();
-      } else {
-
-        const player = document.querySelector('.inline_player');
-        if (player) {
-          player.style.position = '';
-          player.style.top = '';
-          player.style.zIndex = '';
-          player.style.backgroundColor = '';
-        }
-      }
+    
+    if (changes.stickyPlayer !== undefined) {
+      this.setupStickyPlayer();
     }
   }
 
@@ -44,13 +31,21 @@ export class AlbumPage extends BasePage {
     document.querySelector('.playbutton, .playpause')?.click();
   }
 
-  makePlayerSticky() {
+  setupStickyPlayer() {
+    console.log('Setting sticky player');
     const player = document.querySelector('.inline_player');
-    if (player && player.style.position !== 'sticky') {
+
+    if (!this.settings.stickyPlayer) {
+      console.log('Not sticky');
+      player.style.position = 'block';
+      return;
+    }
+
+    if (player && player.style.position !== 'sticky' && this.settings.stickyPlayer) {
+      console.log('Sticky');
       player.style.position = 'sticky';
       player.style.top = '55px';
-      player.style.zIndex = 1000;
-                      
+      player.style.zIndex = 1000;           
 
       const styleElement = document.getElementById('custom-design-rules-style');
       if (styleElement) {
@@ -63,11 +58,6 @@ export class AlbumPage extends BasePage {
           console.error('Error parsing design data:', e);
         }
       }
-    }
-  
-    const showMore = document.querySelector('.show-more');
-    if (showMore && window.getComputedStyle(showMore).display === 'block') {
-      showMore.click();
     }
   }
   
