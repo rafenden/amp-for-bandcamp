@@ -1,4 +1,6 @@
-class CollectionPage extends BasePage {
+import { BasePage } from './BasePage.js';
+
+export class CollectionPage extends BasePage {
   constructor(settings = {}) {
     super(settings);
   }

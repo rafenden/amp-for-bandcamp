@@ -1,5 +1,6 @@
+import { BasePage } from './BasePage.js';
 
-class AlbumPage extends BasePage {
+export class AlbumPage extends BasePage {
   constructor(settings = {}) {
     super(settings);
   }
@@ -17,7 +18,7 @@ class AlbumPage extends BasePage {
   }
 
   setupAutoPlayNext() {
-    // Disable auto-play on album pages as Bandcamp has it's own auto-play
+    // Disable autm pages as Bandcamp has it's own auto-play
   }
 
   applySettingsChanges(changes) {

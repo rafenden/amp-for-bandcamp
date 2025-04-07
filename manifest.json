@@ -31,7 +31,14 @@
     {
       "matches": ["*://*.bandcamp.com/*"],
       "css": ["src/content/content.css"],
-      "js": ["vendor/browser-polyfill.min.js", "src/pages/BasePage.js", "src/pages/AlbumPage.js", "src/pages/CollectionPage.js", "src/pages/FeedPage.js", "src/content/content.js"]
+      "js": ["vendor/browser-polyfill.min.js", "src/content/content.js"],
+      "type": "module"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["src/*"],
+      "matches": ["*://*.bandcamp.com/*"]
     }
   ],
   "permissions": ["storage"],

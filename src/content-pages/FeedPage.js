@@ -1,4 +1,6 @@
-class FeedPage extends BasePage {
+import { BasePage } from './BasePage.js';
+
+export class FeedPage extends BasePage {
   constructor(settings = {}) {
     super(settings);
     this.progressBarContainer = null;

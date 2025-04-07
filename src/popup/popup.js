@@ -1,3 +1,5 @@
+import { DEFAULT_SETTINGS } from '../constants.js';
+
 const stickyPlayerToggle = document.getElementById('stickyPlayer');
 const autoPlayNextToggle = document.getElementById('autoPlayNext');
 const showLeaveWarningToggle = document.getElementById('showLeaveWarning');
@@ -5,41 +7,13 @@ const showProgressBarToggle = document.getElementById('showProgressBar');
 const seekSecondsInput = document.getElementById('seekSeconds');
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Load settings
-  browser.storage.sync.get({
-    stickyPlayer: true,
-    autoPlayNext: true,
-    showLeaveWarning: true,
-    showProgressBar: true,
-    seekSeconds: 30
-  }).then(items => {
+  browser.storage.sync.get(DEFAULT_SETTINGS).then(items => {
     stickyPlayerToggle.checked = items.stickyPlayer;
     autoPlayNextToggle.checked = items.autoPlayNext;
     showLeaveWarningToggle.checked = items.showLeaveWarning;
     showProgressBarToggle.checked = items.showProgressBar;
     seekSecondsInput.value = items.seekSeconds;
   }).catch(() => {});
-
-  // Find and play the last paused track
-  const pausedTracks = document.querySelectorAll('.story-innards.paused');
-  const lastPausedTrack = pausedTracks.length > 0 ? pausedTracks[pausedTracks.length - 1] : null;
-  
-  if (lastPausedTrack) {
-    const trackId = lastPausedTrack.dataset.trackid;
-    const trackUrl = lastPausedTrack.querySelector('.item-link').href;
-    
-    // Send message to content script to play the track
-    browser.tabs.query({ active: true, currentWindow: true }).then(tabs => {
-      browser.tabs.sendMessage(tabs[0].id, {
-        action: 'playTrack',
-        trackId: trackId,
-        trackUrl: trackUrl
-      });
-    }).catch(() => {});
-
-    // Update UI to show track is playing
-    lastPausedTrack.classList.remove('paused');
-  }
 });
 
 stickyPlayerToggle.addEventListener('change', () => {

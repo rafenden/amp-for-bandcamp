@@ -1,4 +1,4 @@
-class BasePage {
+export class BasePage {
   constructor(settings = {}) {
     this.settings = {
       stickyPlayer: true,
