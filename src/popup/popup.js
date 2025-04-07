@@ -1,6 +1,7 @@
 const stickyPlayerToggle = document.getElementById('stickyPlayer');
 const autoPlayNextToggle = document.getElementById('autoPlayNext');
 const showLeaveWarningToggle = document.getElementById('showLeaveWarning');
+const showProgressBarToggle = document.getElementById('showProgressBar');
 const seekSecondsInput = document.getElementById('seekSeconds');
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -9,11 +10,13 @@ document.addEventListener('DOMContentLoaded', () => {
     stickyPlayer: true,
     autoPlayNext: true,
     showLeaveWarning: true,
+    showProgressBar: true,
     seekSeconds: 30
   }).then(items => {
     stickyPlayerToggle.checked = items.stickyPlayer;
     autoPlayNextToggle.checked = items.autoPlayNext;
     showLeaveWarningToggle.checked = items.showLeaveWarning;
+    showProgressBarToggle.checked = items.showProgressBar;
     seekSecondsInput.value = items.seekSeconds;
   }).catch(() => {});
 
@@ -51,6 +54,11 @@ autoPlayNextToggle.addEventListener('change', () => {
 
 showLeaveWarningToggle.addEventListener('change', () => {
   browser.storage.sync.set({ showLeaveWarning: showLeaveWarningToggle.checked })
+    .catch(() => {});
+});
+
+showProgressBarToggle.addEventListener('change', () => {
+  browser.storage.sync.set({ showProgressBar: showProgressBarToggle.checked })
     .catch(() => {});
 });
 

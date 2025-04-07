@@ -99,3 +99,20 @@
   90% { opacity: 1; }
   100% { opacity: 0; }
 }
+
+/* Feed Item Progress Bar */
+.playback-progress {
+  width: 100%;
+  height: 4px;
+  background-color: #ddd;
+  border-radius: 2px;
+  overflow: hidden;
+  margin-top: 8px; /* Add some space above the bar */
+}
+
+.playback-progress-inner {
+  height: 100%;
+  background-color: #1DA0C3; /* Use a theme color */
+  width: 0%; /* Initial width */
+  transition: width 0.1s linear; /* Smooth transition */
+}

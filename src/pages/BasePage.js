@@ -4,6 +4,7 @@ class BasePage {
       stickyPlayer: true,
       autoPlayNext: true,
       showLeaveWarning: true,
+      showProgressBar: true,
       seekSeconds: 30,
       ...settings
     };
