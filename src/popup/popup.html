@@ -11,56 +11,48 @@
 <body>
   <h1>Bandcamp Tuned</h1>
   
-  <section>
-    <h2>Settings</h2>
-    <div class="settings">
-      <label>
-        <input type="checkbox" id="stickyPlayer" checked>
-        Sticky Player on Album Page
-      </label>
+  <fieldset class="settings">
+    <legend>Settings</legend>
+    <label>
+      <input type="checkbox" id="stickyPlayer" checked>
+      Sticky Player on Album Page
+    </label>
 
-      <label>
-        <input type="checkbox" id="autoPlayNext" checked>
-        Auto Play Next Track
-      </label>
+    <label>
+      <input type="checkbox" id="autoPlayNext" checked>
+      Auto Play Next Track
+    </label>
 
-      <label>
-        <input type="checkbox" id="showLeaveWarning" checked>
-        Show Leave Warning When Playing
-      </label>
+    <label>
+      <input type="checkbox" id="showLeaveWarning" checked>
+      Show Leave Warning When Playing
+    </label>
 
-      <label>
-        <input type="number" id="seekSeconds" min="5" max="60" step="5" value="30">
-        Seek Time (seconds)
-      </label>
-    </div>
-  </section>
+    <label>
+      <input type="number" id="seekSeconds" min="5" max="60" step="5" value="30">
+      Seek Time (seconds)
+    </label>
+  </fieldset>
 
-  <section>
-    <h2>Keyboard Shortcuts</h2>
+  <fieldset>
+    <legend>Keyboard Shortcuts</legend>
     <dl class="shortcuts">
-      <div>
-        <dt><kbd>Space</kbd></dt>
-        <dd>Play/Pause</dd>
-      </div>
-      <div>
-        <dt><kbd>↓</kbd></dt>
-        <dd>Next Track</dd>
-      </div>
-      <div>
-        <dt><kbd>↑</kbd></dt>
-        <dd>Previous Track</dd>
-      </div>
-      <div>
-        <dt><kbd>→</kbd></dt>
-        <dd>Fast Forward</dd>
-      </div>
-      <div>
-        <dt><kbd>←</kbd></dt>
-        <dd>Rewind</dd>
-      </div>
+      <dt><kbd>Space</kbd></dt>
+      <dd>Play/Pause</dd>
+      
+      <dt><kbd>↓</kbd></dt>
+      <dd>Next Track</dd>
+      
+      <dt><kbd>↑</kbd></dt>
+      <dd>Previous Track</dd>
+      
+      <dt><kbd>→</kbd></dt>
+      <dd>Fast Forward</dd>
+      
+      <dt><kbd>←</kbd></dt>
+      <dd>Rewind</dd>
     </dl>
-  </section>
+  </fieldset>
   
   <footer>
     <small>This extension is not affiliated with Bandcamp or Epic Games.</small>
