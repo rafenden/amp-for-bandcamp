@@ -1,21 +1,23 @@
 {
-  "name": "bandcamp-tuned",
+  "name": "amp-for-bandcamp",
   "version": "1.0.0",
-  "description": "Browser extension that enhances the Bandcamp listening experience",
+  "description": "Enhances Bandcamp functionality with playback controls and UI improvements",
   "keywords": [
     "bandcamp",
     "music",
     "browser-extension",
     "safari-extension",
     "chrome-extension",
+    "edge-extension",
     "firefox-addon"
   ],
   "author": "Rafal Enden",
   "repository": {
     "type": "git",
-    "url": "https://github.com/rafenden/bandcamp-tuned-extension.git"
+    "url": "https://github.com/rafenden/amp-for-bandcamp.git"
   },
   "scripts": {
+    "preinstall": "curl -o vendor/webextension-polyfill.min.js https://unpkg.com/webextension-polyfill@0.12.0/dist/browser-polyfill.min.js",
     "build:zip": "zip -r dist/bandcamp-tuned.zip manifest.json src/ vendor/ icons/",
     "build:safari": "xcodebuild -project \"xcode/Bandcamp Tuned.xcodeproj\" -scheme \"Bandcamp Tuned (macOS)\" -configuration Release -derivedDataPath dist/safari build",
     "build": "npm run build:zip && npm run build:safari"

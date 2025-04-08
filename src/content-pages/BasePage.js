@@ -1,11 +1,9 @@
+import { DEFAULT_SETTINGS } from '../constants.js';
+
 export class BasePage {
   constructor(settings = {}) {
     this.settings = {
-      stickyPlayer: true,
-      autoPlayNext: true,
-      showLeaveWarning: true,
-      showProgressBar: true,
-      seekSeconds: 30,
+      ...DEFAULT_SETTINGS,
       ...settings
     };
     this.autoPlayInterval = null;
