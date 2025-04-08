@@ -38,16 +38,12 @@ export class AlbumPage extends BasePage {
     }
 
     if (!this.settings.stickyPlayer) {
-      player.style.position = '';
-      player.style.top = '';
-      player.style.zIndex = '';
+      player.classList.remove('sticky');
       return;
     }
 
     if (this.settings.stickyPlayer) {
-      player.style.position = 'sticky';
-      player.style.top = '55px';
-      player.style.zIndex = 1000;           
+      player.classList.add('sticky');
 
       const styleElement = document.getElementById('custom-design-rules-style');
       if (styleElement) {
