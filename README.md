@@ -1,6 +1,6 @@
-# Bandcamp Tuned - Browser Extension
+# Amp for Bandcamp - Browser Extension
 
-A multi-browser extension (Chrome, Firefox, Safari) that enhances Bandcamp functionality with playback controls and UI improvements.
+A multi-browser extension (Chrome, Firefox, Safari) that amplifies Bandcamp functionality with playback controls and UI improvements.
 
 > **Disclaimer**: This extension is not affiliated with, endorsed by, or connected to Bandcamp or Epic Games. It is an independent project designed to enhance the user experience on Bandcamp.
 
@@ -68,6 +68,6 @@ npm run build:safari
 ```
 
 All build artifacts will be placed in the `dist` directory:
-- `dist/bandcamp-tuned.zip` - Chrome/Firefox extension package
+- `dist/amp-for-bandcamp.zip` - Chrome/Firefox extension package
 - `dist/safari` - Safari build output (compiled extension)
 
