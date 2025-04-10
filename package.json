@@ -18,7 +18,7 @@
   },
   "scripts": {
     "build:zip": "zip -r dist/amp-for-bandcamp.zip manifest.json src/ vendor/ icons/",
-    "build:safari": "xcodebuild -project \"xcode/Amp for Bandcamp.xcodeproj\" -scheme \"App-Mac\" -configuration Release -derivedDataPath dist/safari build",
+    "build:safari": "xcodebuild -project \"xcode/Amp for Bandcamp.xcodeproj\" -scheme \"Amp for Bandcamp (macOS)\" -configuration Release -derivedDataPath dist/safari build",
     "build": "npm run build:zip && npm run build:safari"
   }
 }
