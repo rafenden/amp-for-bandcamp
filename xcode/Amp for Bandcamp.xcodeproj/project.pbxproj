@@ -13,8 +13,8 @@
 		B804B5E42DA08E4B000B4088 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B804B5E22DA08E4B000B4088 /* Main.storyboard */; };
 		B804B5ED2DA08E4B000B4088 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B804B5EC2DA08E4B000B4088 /* AppDelegate.swift */; };
 		B804B5F02DA08E4B000B4088 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B804B5EE2DA08E4B000B4088 /* Main.storyboard */; };
-		B804B5F82DA08E4B000B4088 /* Bandcamp Tuned Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B804B5F72DA08E4B000B4088 /* Bandcamp Tuned Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		B804B6022DA08E4B000B4088 /* Bandcamp Tuned Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B804B6012DA08E4B000B4088 /* Bandcamp Tuned Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B804B5F82DA08E4B000B4088 /* Amp for Bandcamp Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B804B5F72DA08E4B000B4088 /* Amp for Bandcamp Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B804B6022DA08E4B000B4088 /* Amp for Bandcamp Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B804B6012DA08E4B000B4088 /* Amp for Bandcamp Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B804B6082DA08E4B000B4088 /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = B804B5CB2DA08E4A000B4088 /* Main.html */; };
 		B804B6092DA08E4B000B4088 /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = B804B5CB2DA08E4A000B4088 /* Main.html */; };
 		B804B60A2DA08E4B000B4088 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B804B5CD2DA08E4A000B4088 /* Icon.png */; };
@@ -67,7 +67,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				B804B5F82DA08E4B000B4088 /* Bandcamp Tuned Extension.appex in Embed Foundation Extensions */,
+				B804B5F82DA08E4B000B4088 /* Amp for Bandcamp Extension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -78,7 +78,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				B804B6022DA08E4B000B4088 /* Bandcamp Tuned Extension.appex in Embed Foundation Extensions */,
+				B804B6022DA08E4B000B4088 /* Amp for Bandcamp Extension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -93,20 +93,20 @@
 		B804B5D02DA08E4A000B4088 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B804B5D12DA08E4B000B4088 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B804B5D32DA08E4B000B4088 /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
-		B804B5D82DA08E4B000B4088 /* Bandcamp Tuned.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bandcamp Tuned.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B804B5D82DA08E4B000B4088 /* Amp for Bandcamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Amp for Bandcamp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B804B5DB2DA08E4B000B4088 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B804B5DD2DA08E4B000B4088 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B804B5E02DA08E4B000B4088 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B804B5E32DA08E4B000B4088 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B804B5E52DA08E4B000B4088 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B804B5EA2DA08E4B000B4088 /* Bandcamp Tuned.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bandcamp Tuned.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B804B5EA2DA08E4B000B4088 /* Amp for Bandcamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Amp for Bandcamp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B804B5EC2DA08E4B000B4088 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B804B5EF2DA08E4B000B4088 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B804B5F12DA08E4B000B4088 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B804B5F22DA08E4B000B4088 /* Bandcamp Tuned.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Bandcamp Tuned.entitlements"; sourceTree = "<group>"; };
-		B804B5F72DA08E4B000B4088 /* Bandcamp Tuned Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Bandcamp Tuned Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B804B5F72DA08E4B000B4088 /* Amp for Bandcamp Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Amp for Bandcamp Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B804B5FC2DA08E4B000B4088 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B804B6012DA08E4B000B4088 /* Bandcamp Tuned Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Bandcamp Tuned Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B804B6012DA08E4B000B4088 /* Amp for Bandcamp Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Amp for Bandcamp Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B804B6062DA08E4B000B4088 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B804B6072DA08E4B000B4088 /* Bandcamp Tuned.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Bandcamp Tuned.entitlements"; sourceTree = "<group>"; };
 		B804B6272DA08E4B000B4088 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; name = LICENSE; path = ../../LICENSE; sourceTree = "<group>"; };
@@ -152,24 +152,24 @@
 		B804B5C42DA08E4A000B4088 = {
 			isa = PBXGroup;
 			children = (
-				B804B5C92DA08E4A000B4088 /* Shared (App) */,
-				B804B5D22DA08E4B000B4088 /* Shared (Extension) */,
-				B804B5DA2DA08E4B000B4088 /* iOS (App) */,
-				B804B5EB2DA08E4B000B4088 /* macOS (App) */,
-				B804B5FB2DA08E4B000B4088 /* iOS (Extension) */,
-				B804B6052DA08E4B000B4088 /* macOS (Extension) */,
+				B804B5C92DA08E4A000B4088 /* App-Shared */,
+				B804B5D22DA08E4B000B4088 /* Ext-Shared */,
+				B804B5DA2DA08E4B000B4088 /* App-iOS */,
+				B804B5EB2DA08E4B000B4088 /* App-Mac */,
+				B804B5FB2DA08E4B000B4088 /* Ext-iOS */,
+				B804B6052DA08E4B000B4088 /* Ext-Mac */,
 				B804B5D92DA08E4B000B4088 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		B804B5C92DA08E4A000B4088 /* Shared (App) */ = {
+		B804B5C92DA08E4A000B4088 /* App-Shared */ = {
 			isa = PBXGroup;
 			children = (
 				B804B5D02DA08E4A000B4088 /* ViewController.swift */,
 				B804B5D12DA08E4B000B4088 /* Assets.xcassets */,
 				B804B5CA2DA08E4A000B4088 /* Resources */,
 			);
-			path = "Shared (App)";
+			path = "App-Shared";
 			sourceTree = "<group>";
 		};
 		B804B5CA2DA08E4A000B4088 /* Resources */ = {
@@ -183,27 +183,27 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		B804B5D22DA08E4B000B4088 /* Shared (Extension) */ = {
+		B804B5D22DA08E4B000B4088 /* Ext-Shared */ = {
 			isa = PBXGroup;
 			children = (
 				B804B6262DA08E4B000B4088 /* Resources */,
 				B804B5D32DA08E4B000B4088 /* SafariWebExtensionHandler.swift */,
 			);
-			path = "Shared (Extension)";
+			path = "Ext-Shared";
 			sourceTree = "<group>";
 		};
 		B804B5D92DA08E4B000B4088 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B804B5D82DA08E4B000B4088 /* Bandcamp Tuned.app */,
-				B804B5EA2DA08E4B000B4088 /* Bandcamp Tuned.app */,
-				B804B5F72DA08E4B000B4088 /* Bandcamp Tuned Extension.appex */,
-				B804B6012DA08E4B000B4088 /* Bandcamp Tuned Extension.appex */,
+				B804B5D82DA08E4B000B4088 /* Amp for Bandcamp.app */,
+				B804B5EA2DA08E4B000B4088 /* Amp for Bandcamp.app */,
+				B804B5F72DA08E4B000B4088 /* Amp for Bandcamp Extension.appex */,
+				B804B6012DA08E4B000B4088 /* Amp for Bandcamp Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B804B5DA2DA08E4B000B4088 /* iOS (App) */ = {
+		B804B5DA2DA08E4B000B4088 /* App-iOS */ = {
 			isa = PBXGroup;
 			children = (
 				B804B5DB2DA08E4B000B4088 /* AppDelegate.swift */,
@@ -212,10 +212,10 @@
 				B804B5E22DA08E4B000B4088 /* Main.storyboard */,
 				B804B5E52DA08E4B000B4088 /* Info.plist */,
 			);
-			path = "iOS (App)";
+			path = "App-iOS";
 			sourceTree = "<group>";
 		};
-		B804B5EB2DA08E4B000B4088 /* macOS (App) */ = {
+		B804B5EB2DA08E4B000B4088 /* App-Mac */ = {
 			isa = PBXGroup;
 			children = (
 				B804B5EC2DA08E4B000B4088 /* AppDelegate.swift */,
@@ -223,24 +223,24 @@
 				B804B5F12DA08E4B000B4088 /* Info.plist */,
 				B804B5F22DA08E4B000B4088 /* Bandcamp Tuned.entitlements */,
 			);
-			path = "macOS (App)";
+			path = "App-Mac";
 			sourceTree = "<group>";
 		};
-		B804B5FB2DA08E4B000B4088 /* iOS (Extension) */ = {
+		B804B5FB2DA08E4B000B4088 /* Ext-iOS */ = {
 			isa = PBXGroup;
 			children = (
 				B804B5FC2DA08E4B000B4088 /* Info.plist */,
 			);
-			path = "iOS (Extension)";
+			path = "Ext-iOS";
 			sourceTree = "<group>";
 		};
-		B804B6052DA08E4B000B4088 /* macOS (Extension) */ = {
+		B804B6052DA08E4B000B4088 /* Ext-Mac */ = {
 			isa = PBXGroup;
 			children = (
 				B804B6062DA08E4B000B4088 /* Info.plist */,
 				B804B6072DA08E4B000B4088 /* Bandcamp Tuned.entitlements */,
 			);
-			path = "macOS (Extension)";
+			path = "Ext-Mac";
 			sourceTree = "<group>";
 		};
 		B804B6262DA08E4B000B4088 /* Resources */ = {
@@ -260,9 +260,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B804B5D72DA08E4B000B4088 /* Bandcamp Tuned (iOS) */ = {
+		B804B5D72DA08E4B000B4088 /* Amp for Bandcamp (iOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B804B61C2DA08E4B000B4088 /* Build configuration list for PBXNativeTarget "Bandcamp Tuned (iOS)" */;
+			buildConfigurationList = B804B61C2DA08E4B000B4088 /* Build configuration list for PBXNativeTarget "Amp for Bandcamp (iOS)" */;
 			buildPhases = (
 				B804B5D42DA08E4B000B4088 /* Sources */,
 				B804B5D52DA08E4B000B4088 /* Frameworks */,
@@ -274,16 +274,16 @@
 			dependencies = (
 				B804B5FA2DA08E4B000B4088 /* PBXTargetDependency */,
 			);
-			name = "Bandcamp Tuned (iOS)";
+			name = "Amp for Bandcamp (iOS)";
 			packageProductDependencies = (
 			);
 			productName = "Bandcamp Tuned (iOS)";
-			productReference = B804B5D82DA08E4B000B4088 /* Bandcamp Tuned.app */;
+			productReference = B804B5D82DA08E4B000B4088 /* Amp for Bandcamp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B804B5E92DA08E4B000B4088 /* Bandcamp Tuned (macOS) */ = {
+		B804B5E92DA08E4B000B4088 /* Amp for Bandcamp (macOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B804B6232DA08E4B000B4088 /* Build configuration list for PBXNativeTarget "Bandcamp Tuned (macOS)" */;
+			buildConfigurationList = B804B6232DA08E4B000B4088 /* Build configuration list for PBXNativeTarget "Amp for Bandcamp (macOS)" */;
 			buildPhases = (
 				B804B5E62DA08E4B000B4088 /* Sources */,
 				B804B5E72DA08E4B000B4088 /* Frameworks */,
@@ -295,16 +295,16 @@
 			dependencies = (
 				B804B6042DA08E4B000B4088 /* PBXTargetDependency */,
 			);
-			name = "Bandcamp Tuned (macOS)";
+			name = "Amp for Bandcamp (macOS)";
 			packageProductDependencies = (
 			);
 			productName = "Bandcamp Tuned (macOS)";
-			productReference = B804B5EA2DA08E4B000B4088 /* Bandcamp Tuned.app */;
+			productReference = B804B5EA2DA08E4B000B4088 /* Amp for Bandcamp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B804B5F62DA08E4B000B4088 /* Bandcamp Tuned Extension (iOS) */ = {
+		B804B5F62DA08E4B000B4088 /* Amp for Bandcamp Extension (iOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B804B6182DA08E4B000B4088 /* Build configuration list for PBXNativeTarget "Bandcamp Tuned Extension (iOS)" */;
+			buildConfigurationList = B804B6182DA08E4B000B4088 /* Build configuration list for PBXNativeTarget "Amp for Bandcamp Extension (iOS)" */;
 			buildPhases = (
 				B804B5F32DA08E4B000B4088 /* Sources */,
 				B804B5F42DA08E4B000B4088 /* Frameworks */,
@@ -314,16 +314,16 @@
 			);
 			dependencies = (
 			);
-			name = "Bandcamp Tuned Extension (iOS)";
+			name = "Amp for Bandcamp Extension (iOS)";
 			packageProductDependencies = (
 			);
 			productName = "Bandcamp Tuned Extension (iOS)";
-			productReference = B804B5F72DA08E4B000B4088 /* Bandcamp Tuned Extension.appex */;
+			productReference = B804B5F72DA08E4B000B4088 /* Amp for Bandcamp Extension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
-		B804B6002DA08E4B000B4088 /* Bandcamp Tuned Extension (macOS) */ = {
+		B804B6002DA08E4B000B4088 /* Amp for Bandcamp Extension (macOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B804B61F2DA08E4B000B4088 /* Build configuration list for PBXNativeTarget "Bandcamp Tuned Extension (macOS)" */;
+			buildConfigurationList = B804B61F2DA08E4B000B4088 /* Build configuration list for PBXNativeTarget "Amp for Bandcamp Extension (macOS)" */;
 			buildPhases = (
 				B804B5FD2DA08E4B000B4088 /* Sources */,
 				B804B5FE2DA08E4B000B4088 /* Frameworks */,
@@ -333,11 +333,11 @@
 			);
 			dependencies = (
 			);
-			name = "Bandcamp Tuned Extension (macOS)";
+			name = "Amp for Bandcamp Extension (macOS)";
 			packageProductDependencies = (
 			);
 			productName = "Bandcamp Tuned Extension (macOS)";
-			productReference = B804B6012DA08E4B000B4088 /* Bandcamp Tuned Extension.appex */;
+			productReference = B804B6012DA08E4B000B4088 /* Amp for Bandcamp Extension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -364,7 +364,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B804B5C82DA08E4A000B4088 /* Build configuration list for PBXProject "Bandcamp Tuned" */;
+			buildConfigurationList = B804B5C82DA08E4A000B4088 /* Build configuration list for PBXProject "Amp for Bandcamp" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -378,10 +378,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B804B5D72DA08E4B000B4088 /* Bandcamp Tuned (iOS) */,
-				B804B5E92DA08E4B000B4088 /* Bandcamp Tuned (macOS) */,
-				B804B5F62DA08E4B000B4088 /* Bandcamp Tuned Extension (iOS) */,
-				B804B6002DA08E4B000B4088 /* Bandcamp Tuned Extension (macOS) */,
+				B804B5D72DA08E4B000B4088 /* Amp for Bandcamp (iOS) */,
+				B804B5E92DA08E4B000B4088 /* Amp for Bandcamp (macOS) */,
+				B804B5F62DA08E4B000B4088 /* Amp for Bandcamp Extension (iOS) */,
+				B804B6002DA08E4B000B4088 /* Amp for Bandcamp Extension (macOS) */,
 			);
 		};
 /* End PBXProject section */
@@ -483,12 +483,12 @@
 /* Begin PBXTargetDependency section */
 		B804B5FA2DA08E4B000B4088 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B804B5F62DA08E4B000B4088 /* Bandcamp Tuned Extension (iOS) */;
+			target = B804B5F62DA08E4B000B4088 /* Amp for Bandcamp Extension (iOS) */;
 			targetProxy = B804B5F92DA08E4B000B4088 /* PBXContainerItemProxy */;
 		};
 		B804B6042DA08E4B000B4088 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B804B6002DA08E4B000B4088 /* Bandcamp Tuned Extension (macOS) */;
+			target = B804B6002DA08E4B000B4088 /* Amp for Bandcamp Extension (macOS) */;
 			targetProxy = B804B6032DA08E4B000B4088 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -652,7 +652,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 22K4Y64ED2;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
+				INFOPLIST_FILE = "Ext-iOS/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Bandcamp Tuned Extension";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -667,7 +667,7 @@
 					SafariServices,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.enden.Bandcamp-Tuned.Extension";
-				PRODUCT_NAME = "Bandcamp Tuned Extension";
+				PRODUCT_NAME = "Amp for Bandcamp Extension";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -683,7 +683,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 22K4Y64ED2;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
+				INFOPLIST_FILE = "Ext-iOS/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Bandcamp Tuned Extension";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -698,7 +698,7 @@
 					SafariServices,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.enden.Bandcamp-Tuned.Extension";
-				PRODUCT_NAME = "Bandcamp Tuned Extension";
+				PRODUCT_NAME = "Amp for Bandcamp Extension";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -718,7 +718,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 22K4Y64ED2;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "iOS (App)/Info.plist";
+				INFOPLIST_FILE = "App-iOS/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Bandcamp Tuned";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -739,7 +739,7 @@
 					WebKit,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.enden.Bandcamp-Tuned";
-				PRODUCT_NAME = "Bandcamp Tuned";
+				PRODUCT_NAME = "Amp for Bandcamp";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -758,7 +758,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 22K4Y64ED2;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "iOS (App)/Info.plist";
+				INFOPLIST_FILE = "App-iOS/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Bandcamp Tuned";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -779,7 +779,7 @@
 					WebKit,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.enden.Bandcamp-Tuned";
-				PRODUCT_NAME = "Bandcamp Tuned";
+				PRODUCT_NAME = "Amp for Bandcamp";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -792,7 +792,7 @@
 		B804B6202DA08E4B000B4088 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "macOS (Extension)/Bandcamp Tuned.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Ext-Mac/Bandcamp Tuned.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -800,7 +800,7 @@
 				DEVELOPMENT_TEAM = 22K4Y64ED2;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
+				INFOPLIST_FILE = "Ext-Mac/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Bandcamp Tuned Extension";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -815,7 +815,7 @@
 					SafariServices,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.enden.Bandcamp-Tuned.Extension";
-				PRODUCT_NAME = "Bandcamp Tuned Extension";
+				PRODUCT_NAME = "Amp for Bandcamp Extension";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -826,7 +826,7 @@
 		B804B6212DA08E4B000B4088 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "macOS (Extension)/Bandcamp Tuned.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Ext-Mac/Bandcamp Tuned.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -834,7 +834,7 @@
 				DEVELOPMENT_TEAM = 22K4Y64ED2;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
+				INFOPLIST_FILE = "Ext-Mac/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Bandcamp Tuned Extension";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -849,7 +849,7 @@
 					SafariServices,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.enden.Bandcamp-Tuned.Extension";
-				PRODUCT_NAME = "Bandcamp Tuned Extension";
+				PRODUCT_NAME = "Amp for Bandcamp Extension";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -862,7 +862,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "macOS (App)/Bandcamp Tuned.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "App-Mac/Bandcamp Tuned.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -870,7 +870,7 @@
 				DEVELOPMENT_TEAM = 22K4Y64ED2;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "macOS (App)/Info.plist";
+				INFOPLIST_FILE = "App-Mac/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Bandcamp Tuned";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
@@ -888,7 +888,7 @@
 					WebKit,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.enden.Bandcamp-Tuned";
-				PRODUCT_NAME = "Bandcamp Tuned";
+				PRODUCT_NAME = "Amp for Bandcamp";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -901,16 +901,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "macOS (App)/Bandcamp Tuned.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "App-Mac/Bandcamp Tuned.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 22K4Y64ED2;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "macOS (App)/Info.plist";
+				INFOPLIST_FILE = "App-Mac/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Bandcamp Tuned";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
@@ -928,7 +928,7 @@
 					WebKit,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.enden.Bandcamp-Tuned";
-				PRODUCT_NAME = "Bandcamp Tuned";
+				PRODUCT_NAME = "Amp for Bandcamp";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -939,7 +939,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B804B5C82DA08E4A000B4088 /* Build configuration list for PBXProject "Bandcamp Tuned" */ = {
+		B804B5C82DA08E4A000B4088 /* Build configuration list for PBXProject "Amp for Bandcamp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B804B6162DA08E4B000B4088 /* Debug */,
@@ -948,7 +948,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B804B6182DA08E4B000B4088 /* Build configuration list for PBXNativeTarget "Bandcamp Tuned Extension (iOS)" */ = {
+		B804B6182DA08E4B000B4088 /* Build configuration list for PBXNativeTarget "Amp for Bandcamp Extension (iOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B804B6192DA08E4B000B4088 /* Debug */,
@@ -957,7 +957,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B804B61C2DA08E4B000B4088 /* Build configuration list for PBXNativeTarget "Bandcamp Tuned (iOS)" */ = {
+		B804B61C2DA08E4B000B4088 /* Build configuration list for PBXNativeTarget "Amp for Bandcamp (iOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B804B61D2DA08E4B000B4088 /* Debug */,
@@ -966,7 +966,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B804B61F2DA08E4B000B4088 /* Build configuration list for PBXNativeTarget "Bandcamp Tuned Extension (macOS)" */ = {
+		B804B61F2DA08E4B000B4088 /* Build configuration list for PBXNativeTarget "Amp for Bandcamp Extension (macOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B804B6202DA08E4B000B4088 /* Debug */,
@@ -975,7 +975,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B804B6232DA08E4B000B4088 /* Build configuration list for PBXNativeTarget "Bandcamp Tuned (macOS)" */ = {
+		B804B6232DA08E4B000B4088 /* Build configuration list for PBXNativeTarget "Amp for Bandcamp (macOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B804B6242DA08E4B000B4088 /* Debug */,
