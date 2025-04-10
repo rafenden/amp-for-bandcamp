@@ -79,6 +79,8 @@ fieldset {
 
 .settings input[type="checkbox"] {
   margin: 0;
+  width: 15px;
+  height: 15px;
 }
 
 .settings input[type="number"] {
