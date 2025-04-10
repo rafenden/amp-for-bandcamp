@@ -666,7 +666,7 @@
 					"-framework",
 					SafariServices,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.enden.AmpForBandcamp.Extension";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.enden.amp-for-bandcamp.Extension";
 				PRODUCT_NAME = "Amp for Bandcamp Extension";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -697,7 +697,7 @@
 					"-framework",
 					SafariServices,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.enden.AmpForBandcamp.Extension";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.enden.amp-for-bandcamp.Extension";
 				PRODUCT_NAME = "Amp for Bandcamp Extension";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -738,7 +738,7 @@
 					"-framework",
 					WebKit,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.enden.AmpForBandcamp";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.enden.amp-for-bandcamp";
 				PRODUCT_NAME = "Amp for Bandcamp";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
@@ -778,7 +778,7 @@
 					"-framework",
 					WebKit,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.enden.AmpForBandcamp";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.enden.amp-for-bandcamp";
 				PRODUCT_NAME = "Amp for Bandcamp";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
@@ -814,7 +814,7 @@
 					"-framework",
 					SafariServices,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.enden.AmpForBandcamp.Extension";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.enden.amp-for-bandcamp.Extension";
 				PRODUCT_NAME = "Amp for Bandcamp Extension";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -848,7 +848,7 @@
 					"-framework",
 					SafariServices,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.enden.AmpForBandcamp.Extension";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.enden.amp-for-bandcamp.Extension";
 				PRODUCT_NAME = "Amp for Bandcamp Extension";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -887,7 +887,7 @@
 					"-framework",
 					WebKit,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.enden.AmpForBandcamp";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.enden.amp-for-bandcamp";
 				PRODUCT_NAME = "Amp for Bandcamp";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
@@ -927,7 +927,7 @@
 					"-framework",
 					WebKit,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.enden.AmpForBandcamp";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.enden.amp-for-bandcamp";
 				PRODUCT_NAME = "Amp for Bandcamp";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
