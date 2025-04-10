@@ -1,5 +1,4 @@
 :root {
-  --bg-color: #ffffff;
   --text-color: #333;
   --border-color: #ddd;
   --toggle-bg: #ccc;
@@ -12,7 +11,6 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg-color: #222;
     --text-color: #eee;
     --border-color: #444;
     --toggle-bg: #555;
