@@ -1,24 +1,28 @@
+/* See https://github.com/WebKit/WebKit/blob/main/Source/WebCore/css/CSSValueKeywords.in */
+
 :root {
-  --text-color: #333;
-  --border-color: #ddd;
-  --toggle-bg: #ccc;
-  --toggle-active: #1DA0C3;
+  --bg-color: white;
+  --text-color: #000000;
+  --border-color: rgba(0, 0, 0, 0.1);
+  --toggle-bg: rgba(0, 0, 0, 0.1);
+  --toggle-active: #1da0c3;
   --kbd-bg: #f5f5f5;
   --kbd-border: #ddd;
-  --footer-color: #777;
-  --footer-border: #ccc;
+  --footer-color: #666666;
+  --footer-border: rgba(0, 0, 0, 0.1);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --text-color: #eee;
-    --border-color: #444;
-    --toggle-bg: #555;
-    --toggle-active: #1DA0C3;
-    --kbd-bg: #333;
-    --kbd-border: #555;
-    --footer-color: #999;
-    --footer-border: #444;
+    --bg-color: #2c2c2e;
+    --text-color: #ffffff;
+    --border-color: rgba(255, 255, 255, 0.15);
+    --toggle-bg: rgba(255, 255, 255, 0.2);
+    --toggle-active: #2fb9dc;
+    --kbd-bg: #3a3a3c;
+    --kbd-border: #4a4a4c;
+    --footer-color: #a0a0a0;
+    --footer-border: rgba(255, 255, 255, 0.15);
   }
 }
 
@@ -115,7 +119,7 @@ legend {
   border: 1px solid var(--border-color);
   border-radius: 3px;
   font-size: 13px;
-  height: 20px;
+  height: 22px;
   margin: 0;
   box-sizing: border-box;
   background-color: var(--bg-color);
