@@ -23,7 +23,7 @@ export class BasePage {
 
   setupKeyboardShortcuts() {
     document.addEventListener('keydown', (e) => {
-      if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') {
+      if (!this.settings.enableKeyboardShortcuts || e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') {
         return;
       }
 

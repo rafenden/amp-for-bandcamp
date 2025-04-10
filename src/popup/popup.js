@@ -4,6 +4,7 @@ const stickyPlayerToggle = document.getElementById('stickyPlayer');
 const autoPlayNextToggle = document.getElementById('autoPlayNext');
 const showLeaveWarningToggle = document.getElementById('showLeaveWarning');
 const showProgressBarToggle = document.getElementById('showProgressBar');
+const enableKeyboardShortcutsToggle = document.getElementById('enableKeyboardShortcuts');
 const seekSecondsInput = document.getElementById('seekSeconds');
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -12,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     autoPlayNextToggle.checked = items.autoPlayNext;
     showLeaveWarningToggle.checked = items.showLeaveWarning;
     showProgressBarToggle.checked = items.showProgressBar;
+    enableKeyboardShortcutsToggle.checked = items.enableKeyboardShortcuts;
     seekSecondsInput.value = items.seekSeconds;
   }).catch(console.error);
 });
@@ -33,6 +35,11 @@ showLeaveWarningToggle.addEventListener('change', () => {
 
 showProgressBarToggle.addEventListener('change', () => {
   browser.storage.sync.set({ showProgressBar: showProgressBarToggle.checked })
+    .catch(console.error);
+});
+
+enableKeyboardShortcutsToggle.addEventListener('change', () => {
+  browser.storage.sync.set({ enableKeyboardShortcuts: enableKeyboardShortcutsToggle.checked })
     .catch(console.error);
 });
 

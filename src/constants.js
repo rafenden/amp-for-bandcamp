@@ -3,5 +3,6 @@ export const DEFAULT_SETTINGS = {
   autoPlayNext: true,
   seekSeconds: 30,
   showLeaveWarning: true,
-  showProgressBar: true
+  showProgressBar: true,
+  enableKeyboardShortcuts: true
 };
