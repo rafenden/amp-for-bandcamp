@@ -70,7 +70,7 @@ legend {
 
 .settings label {
   display: grid;
-  grid-template-columns: 65px 1fr;
+  grid-template-columns: 20px 1fr;
   padding: 1px 0;
   align-items: center;
   margin-bottom: 8px;
@@ -82,34 +82,7 @@ legend {
 }
 
 .settings input[type="checkbox"] {
-  width: 40px;
-  height: 20px;
-  appearance: none;
-  background: var(--toggle-bg);
-  border-radius: 20px;
-  position: relative;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.settings input[type="checkbox"]:checked {
-  background: var(--toggle-active);
-}
-
-.settings input[type="checkbox"]::before {
-  content: "";
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  top: 2px;
-  left: 2px;
-  background: white;
-  transition: transform 0.3s;
-}
-
-.settings input[type="checkbox"]:checked::before {
-  transform: translateX(20px);
+  margin: 0;
 }
 
 .settings input[type="number"] {
