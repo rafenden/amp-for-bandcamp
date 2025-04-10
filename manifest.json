@@ -31,7 +31,9 @@
     {
       "matches": ["*://*.bandcamp.com/*"],
       "css": ["src/content/content.css"],
-      "js": ["vendor/webextension-polyfill.min.js", "src/content/content.js"]
+      "js": [
+        "vendor/webextension-polyfill.min.js",
+        "src/content/content.js"]
     }
   ],
   "web_accessible_resources": [
