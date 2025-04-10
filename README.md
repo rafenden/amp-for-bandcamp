@@ -37,12 +37,12 @@ A multi-browser extension (Chrome, Firefox, Safari) that amplifies Bandcamp func
 2. Install Xcode from the Mac App Store
 3. Open the Xcode project:
    ```bash
-   open xcode/BandcampTuned.xcodeproj
+   open "xcode/Amp for Bandcamp.xcodeproj"
    ```
 4. Build and run the project in Xcode
 5. Enable the extension in Safari preferences:
    - Safari > Settings > Extensions
-   - Check the box next to "BandcampTuned"
+   - Check the box next to "Amp for Bandcamp"
 
 ## Building
 

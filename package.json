@@ -19,7 +19,7 @@
   "scripts": {
     "preinstall": "curl -o vendor/webextension-polyfill.min.js https://unpkg.com/webextension-polyfill@0.12.0/dist/browser-polyfill.min.js",
     "build:zip": "zip -r dist/amp-for-bandcamp.zip manifest.json src/ vendor/ icons/",
-    "build:safari": "xcodebuild -project \"xcode/Bandcamp Tuned.xcodeproj\" -scheme \"Bandcamp Tuned (macOS)\" -configuration Release -derivedDataPath dist/safari build",
+    "build:safari": "xcodebuild -project \"xcode/Amp for Bandcamp.xcodeproj\" -scheme \"App-Mac\" -configuration Release -derivedDataPath dist/safari build",
     "build": "npm run build:zip && npm run build:safari"
   }
 }
