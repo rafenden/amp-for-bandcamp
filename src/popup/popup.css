@@ -1,7 +1,8 @@
 /* See https://github.com/WebKit/WebKit/blob/main/Source/WebCore/css/CSSValueKeywords.in */
 
 :root {
-  --bg-color: white;
+  color-scheme: light dark;
+  --bg-color: transparent;
   --text-color: #000000;
   --border-color: rgba(0, 0, 0, 0.1);
   --toggle-bg: rgba(0, 0, 0, 0.1);
@@ -14,14 +15,13 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg-color: #2c2c2e;
-    --text-color: #ffffff;
+    --text-color: #e4e4e4;
     --border-color: rgba(255, 255, 255, 0.15);
     --toggle-bg: rgba(255, 255, 255, 0.2);
     --toggle-active: #2fb9dc;
-    --kbd-bg: #3a3a3c;
-    --kbd-border: #4a4a4c;
-    --footer-color: #a0a0a0;
+    --kbd-bg: #2d2d2d;
+    --kbd-border: #3d3d3d;
+    --footer-color: #999999;
     --footer-border: rgba(255, 255, 255, 0.15);
   }
 }
@@ -171,4 +171,22 @@ footer {
 
 small {
   font-size: 8px;
+}
+
+@media (prefers-color-scheme: dark) {
+  input, select, textarea {
+    color-scheme: dark;
+  }
+  
+  .settings input[type="number"] {
+    background-color: #2d2d2d;
+    color: #e4e4e4;
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  kbd {
+    color: #e4e4e4;
+    background: var(--kbd-bg);
+    border-color: var(--kbd-border);
+  }
 }
