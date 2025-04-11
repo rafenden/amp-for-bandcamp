@@ -1,0 +1,8 @@
+// Ext-Mac-Debug.xcconfig
+// macOS Safari extension Debug configuration settings
+
+#include "Ext-Mac-Base.xcconfig"
+#include "Debug.xcconfig"
+
+// Product name includes debug suffix to distinguish from release
+PRODUCT_NAME = $(TARGET_NAME) (Debug) 

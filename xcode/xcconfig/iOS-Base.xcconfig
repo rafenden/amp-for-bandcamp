@@ -1,0 +1,22 @@
+// iOS-Base.xcconfig
+// Common settings for iOS configurations
+
+#include "Base.xcconfig"
+
+// Target settings
+SDKROOT = iphoneos
+TARGETED_DEVICE_FAMILY = 1,2
+SUPPORTS_MACCATALYST = NO
+
+// Bundle identifier
+PRODUCT_BUNDLE_IDENTIFIER = $(PRODUCT_BUNDLE_IDENTIFIER_BASE).ios
+
+// Info.plist location
+INFOPLIST_FILE = App-iOS/Info.plist
+
+// App extension bundle identifier
+APP_EXTENSION_BUNDLE_IDENTIFIER = $(PRODUCT_BUNDLE_IDENTIFIER).$(EXTENSION_BUNDLE_ID_SUFFIX)
+
+// Interface style settings
+SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO
+ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES 

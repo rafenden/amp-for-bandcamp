@@ -1,0 +1,22 @@
+// Mac-Base.xcconfig
+// Common settings for macOS configurations
+
+#include "Base.xcconfig"
+
+// Target settings
+SDKROOT = macosx
+SUPPORTED_PLATFORMS = macosx
+COMBINE_HIDPI_IMAGES = YES
+
+// Bundle identifier
+PRODUCT_BUNDLE_IDENTIFIER = $(PRODUCT_BUNDLE_IDENTIFIER_BASE).mac
+
+// Info.plist location
+INFOPLIST_FILE = App-Mac/Info.plist
+
+// App extension bundle identifier
+APP_EXTENSION_BUNDLE_IDENTIFIER = $(PRODUCT_BUNDLE_IDENTIFIER).$(EXTENSION_BUNDLE_ID_SUFFIX)
+
+// macOS specific settings
+ENABLE_HARDENED_RUNTIME = YES
+CODE_SIGN_ENTITLEMENTS = App-Mac/Amp for Bandcamp.entitlements

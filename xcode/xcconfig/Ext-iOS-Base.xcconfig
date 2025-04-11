@@ -1,0 +1,21 @@
+// Ext-iOS-Base.xcconfig
+// Common settings for iOS Safari extension
+
+#include "Base.xcconfig"
+
+// Target settings
+SDKROOT = iphoneos
+TARGETED_DEVICE_FAMILY = 1,2
+
+// Bundle identifier
+PRODUCT_BUNDLE_IDENTIFIER = $(PRODUCT_BUNDLE_IDENTIFIER_BASE).ios.$(EXTENSION_BUNDLE_ID_SUFFIX)
+
+// Info.plist location
+INFOPLIST_FILE = Ext-iOS/Info.plist
+
+// Extension specific settings
+SKIP_INSTALL = YES
+
+// Safari extension settings
+INFOPLIST_KEY_NSHumanReadableCopyright = Copyright © 2023 Bandcamp Tuned. All rights reserved.
+OTHER_LDFLAGS = -framework SafariServices 

@@ -1,0 +1,8 @@
+// iOS-Release.xcconfig
+// iOS Release configuration settings
+
+#include "iOS-Base.xcconfig"
+#include "Release.xcconfig"
+
+// Standard product name for release build
+PRODUCT_NAME = $(TARGET_NAME) 

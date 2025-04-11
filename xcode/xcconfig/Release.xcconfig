@@ -1,0 +1,17 @@
+// Release.xcconfig
+// Release configuration settings
+
+#include "Base.xcconfig"
+
+// Build settings
+DEBUG_INFORMATION_FORMAT = dwarf-with-dsym
+ENABLE_NS_ASSERTIONS = NO
+GCC_OPTIMIZATION_LEVEL = s
+MTL_ENABLE_DEBUG_INFO = NO
+SWIFT_COMPILATION_MODE = wholemodule
+SWIFT_OPTIMIZATION_LEVEL = -O
+VALIDATE_PRODUCT = YES
+
+// Strip debug symbols
+COPY_PHASE_STRIP = YES
+STRIP_INSTALLED_PRODUCT = YES 

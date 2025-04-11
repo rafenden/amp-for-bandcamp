@@ -1,0 +1,24 @@
+// Ext-Mac-Base.xcconfig
+// Common settings for macOS Safari extension
+
+#include "Base.xcconfig"
+
+// Target settings
+SDKROOT = macosx
+SUPPORTED_PLATFORMS = macosx
+COMBINE_HIDPI_IMAGES = YES
+
+// Bundle identifier
+PRODUCT_BUNDLE_IDENTIFIER = $(PRODUCT_BUNDLE_IDENTIFIER_BASE).mac.$(EXTENSION_BUNDLE_ID_SUFFIX)
+
+// Info.plist location
+INFOPLIST_FILE = Ext-Mac/Info.plist
+
+// Extension specific settings
+SKIP_INSTALL = YES
+CODE_SIGN_ENTITLEMENTS = Ext-Mac/Amp for Bandcamp.entitlements
+
+// macOS specific settings
+ENABLE_HARDENED_RUNTIME = YES
+INFOPLIST_KEY_NSHumanReadableCopyright = Copyright © 2023 Bandcamp Tuned. All rights reserved.
+OTHER_LDFLAGS = -framework SafariServices 

@@ -1,0 +1,8 @@
+// Ext-Mac-Release.xcconfig
+// macOS Safari extension Release configuration settings
+
+#include "Ext-Mac-Base.xcconfig"
+#include "Release.xcconfig"
+
+// Standard product name for release build
+PRODUCT_NAME = $(TARGET_NAME) 
