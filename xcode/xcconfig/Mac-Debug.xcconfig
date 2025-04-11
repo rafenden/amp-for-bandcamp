@@ -3,6 +3,3 @@
 
 #include "Mac-Base.xcconfig"
 #include "Debug.xcconfig"
-
-// Product name includes debug suffix to distinguish from release
-PRODUCT_NAME = $(TARGET_NAME) (Debug) 

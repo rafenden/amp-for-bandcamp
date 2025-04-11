@@ -20,8 +20,6 @@ CODE_SIGN_ENTITLEMENTS = Ext-Mac/Amp for Bandcamp.entitlements
 
 // macOS specific settings
 ENABLE_HARDENED_RUNTIME = YES
-INFOPLIST_KEY_CFBundleDisplayName = "Amp for Bandcamp"
-INFOPLIST_KEY_NSHumanReadableCopyright = Copyright © 2023 Bandcamp Tuned. All rights reserved.
 
 // Runtime path settings
 LD_RUNPATH_SEARCH_PATHS = $(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks

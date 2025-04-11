@@ -15,7 +15,6 @@ PRODUCT_BUNDLE_IDENTIFIER = $(PRODUCT_BUNDLE_IDENTIFIER_BASE)
 INFOPLIST_FILE = App-iOS/Info.plist
 
 // iOS specific settings
-INFOPLIST_KEY_CFBundleDisplayName = "Amp for Bandcamp"
 INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music"
 INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES
 INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen

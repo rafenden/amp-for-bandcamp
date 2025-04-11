@@ -1,6 +1,11 @@
 // Base.xcconfig
 // Common settings for all configurations
 
+// Standard product name for release build
+PRODUCT_NAME = $(TARGET_NAME) 
+INFOPLIST_KEY_CFBundleDisplayName = "Amp for Bandcamp"
+INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music"
+
 // Bundle identifier configuration
 PRODUCT_BUNDLE_IDENTIFIER_BASE = com.enden.amp-for-bandcamp
 EXTENSION_BUNDLE_ID_SUFFIX = Extension
