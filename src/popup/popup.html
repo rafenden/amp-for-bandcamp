@@ -15,17 +15,17 @@
     <legend>Settings</legend>
     <label>
       <input type="checkbox" id="stickyPlayer" checked>
-      Sticky Player on Album Page
+      Pin Player at Top of Album Page
     </label>
 
     <label>
       <input type="checkbox" id="autoPlayNext" checked>
-      Auto Play Next Track
+      Play Next Track Automatically
     </label>
 
     <label>
       <input type="checkbox" id="showLeaveWarning" checked>
-      Show Leave Warning When Playing
+      Warn When Leaving Site During Playback
     </label>
 
     <label>
@@ -38,13 +38,15 @@
       Enable Keyboard Shortcuts
     </label>
 
-    <label>
-      <input type="number" id="seekSeconds" min="5" max="60" step="5" value="30">
-      Seek Time (seconds)
-    </label>
+    <div id="seekDurationSection">
+      <label>
+        <input type="number" id="seekSeconds" min="5" max="60" step="5" value="30">
+        Skip Duration (seconds)
+      </label>
+    </div>
   </fieldset>
 
-  <fieldset>
+  <fieldset id="keyboardShortcutsSection">
     <legend>Keyboard Shortcuts</legend>
     <dl class="shortcuts">
       <dt><kbd>Space</kbd></dt>

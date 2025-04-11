@@ -6,6 +6,13 @@ const showLeaveWarningToggle = document.getElementById('showLeaveWarning');
 const showProgressBarToggle = document.getElementById('showProgressBar');
 const enableKeyboardShortcutsToggle = document.getElementById('enableKeyboardShortcuts');
 const seekSecondsInput = document.getElementById('seekSeconds');
+const keyboardShortcutsSection = document.getElementById('keyboardShortcutsSection');
+const seekDurationSection = document.getElementById('seekDurationSection');
+
+function updateKeyboardShortcutsVisibility(enabled) {
+  keyboardShortcutsSection.style.display = enabled ? 'block' : 'none';
+  seekDurationSection.style.display = enabled ? 'block' : 'none';
+}
 
 document.addEventListener('DOMContentLoaded', () => {
   browser.storage.sync.get(DEFAULT_SETTINGS).then(items => {
@@ -15,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     showProgressBarToggle.checked = items.showProgressBar;
     enableKeyboardShortcutsToggle.checked = items.enableKeyboardShortcuts;
     seekSecondsInput.value = items.seekSeconds;
+    updateKeyboardShortcutsVisibility(items.enableKeyboardShortcuts);
   }).catch(console.error);
 });
 
@@ -39,8 +47,10 @@ showProgressBarToggle.addEventListener('change', () => {
 });
 
 enableKeyboardShortcutsToggle.addEventListener('change', () => {
-  browser.storage.sync.set({ enableKeyboardShortcuts: enableKeyboardShortcutsToggle.checked })
+  const enabled = enableKeyboardShortcutsToggle.checked;
+  browser.storage.sync.set({ enableKeyboardShortcuts: enabled })
     .catch(console.error);
+  updateKeyboardShortcutsVisibility(enabled);
 });
 
 seekSecondsInput.addEventListener('change', () => {
