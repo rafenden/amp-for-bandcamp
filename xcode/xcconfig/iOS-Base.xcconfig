@@ -9,10 +9,22 @@ TARGETED_DEVICE_FAMILY = 1,2
 SUPPORTS_MACCATALYST = NO
 
 // Bundle identifier
-PRODUCT_BUNDLE_IDENTIFIER = $(PRODUCT_BUNDLE_IDENTIFIER_BASE).ios
+PRODUCT_BUNDLE_IDENTIFIER = $(PRODUCT_BUNDLE_IDENTIFIER_BASE)
 
 // Info.plist location
 INFOPLIST_FILE = App-iOS/Info.plist
+
+// iOS specific settings
+INFOPLIST_KEY_CFBundleDisplayName = "Amp for Bandcamp"
+INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music"
+INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES
+INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen
+INFOPLIST_KEY_UIMainStoryboardFile = Main
+INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
+INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
+
+// Framework settings
+OTHER_LDFLAGS = -framework SafariServices -framework WebKit
 
 // App extension bundle identifier
 APP_EXTENSION_BUNDLE_IDENTIFIER = $(PRODUCT_BUNDLE_IDENTIFIER).$(EXTENSION_BUNDLE_ID_SUFFIX)

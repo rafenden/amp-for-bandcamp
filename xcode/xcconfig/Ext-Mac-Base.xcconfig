@@ -9,7 +9,7 @@ SUPPORTED_PLATFORMS = macosx
 COMBINE_HIDPI_IMAGES = YES
 
 // Bundle identifier
-PRODUCT_BUNDLE_IDENTIFIER = $(PRODUCT_BUNDLE_IDENTIFIER_BASE).mac.$(EXTENSION_BUNDLE_ID_SUFFIX)
+PRODUCT_BUNDLE_IDENTIFIER = $(PRODUCT_BUNDLE_IDENTIFIER_BASE).$(EXTENSION_BUNDLE_ID_SUFFIX)
 
 // Info.plist location
 INFOPLIST_FILE = Ext-Mac/Info.plist
@@ -20,5 +20,12 @@ CODE_SIGN_ENTITLEMENTS = Ext-Mac/Amp for Bandcamp.entitlements
 
 // macOS specific settings
 ENABLE_HARDENED_RUNTIME = YES
+INFOPLIST_KEY_CFBundleDisplayName = "Amp for Bandcamp"
 INFOPLIST_KEY_NSHumanReadableCopyright = Copyright © 2023 Bandcamp Tuned. All rights reserved.
-OTHER_LDFLAGS = -framework SafariServices 
+
+// Runtime path settings
+LD_RUNPATH_SEARCH_PATHS = $(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks
+
+// Framework settings
+OTHER_LDFLAGS = -framework SafariServices
+DEAD_CODE_STRIPPING = YES 

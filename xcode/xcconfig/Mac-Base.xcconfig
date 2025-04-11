@@ -9,10 +9,19 @@ SUPPORTED_PLATFORMS = macosx
 COMBINE_HIDPI_IMAGES = YES
 
 // Bundle identifier
-PRODUCT_BUNDLE_IDENTIFIER = $(PRODUCT_BUNDLE_IDENTIFIER_BASE).mac
+PRODUCT_BUNDLE_IDENTIFIER = $(PRODUCT_BUNDLE_IDENTIFIER_BASE)
 
 // Info.plist location
 INFOPLIST_FILE = App-Mac/Info.plist
+
+// macOS specific settings
+INFOPLIST_KEY_CFBundleDisplayName = "Amp for Bandcamp"
+INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music"
+INFOPLIST_KEY_NSMainStoryboardFile = Main
+INFOPLIST_KEY_NSPrincipalClass = NSApplication
+
+// Framework settings
+OTHER_LDFLAGS = -framework SafariServices -framework WebKit
 
 // App extension bundle identifier
 APP_EXTENSION_BUNDLE_IDENTIFIER = $(PRODUCT_BUNDLE_IDENTIFIER).$(EXTENSION_BUNDLE_ID_SUFFIX)
@@ -20,3 +29,4 @@ APP_EXTENSION_BUNDLE_IDENTIFIER = $(PRODUCT_BUNDLE_IDENTIFIER).$(EXTENSION_BUNDL
 // macOS specific settings
 ENABLE_HARDENED_RUNTIME = YES
 CODE_SIGN_ENTITLEMENTS = App-Mac/Amp for Bandcamp.entitlements
+DEAD_CODE_STRIPPING = YES
