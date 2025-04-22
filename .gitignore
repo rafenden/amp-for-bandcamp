@@ -5,6 +5,7 @@
 __DS_Store
 
 # Xcode
+
 ## User settings
 xcuserdata/
 *.xcuserstate
@@ -21,12 +22,13 @@ xcuserdata/
 *.dSYM
 
 # Safari Extension Build
-Dupa/
+dist/
 
 # Node.js
 node_modules/
 npm-debug.log
 yarn-error.log
 
+# Code editors
 .idea/
 .vscode/
