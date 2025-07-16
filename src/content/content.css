@@ -1,0 +1,21 @@
+.playback-progress {
+  width: 100%;
+  height: 4px;
+  background-color: #ddd;
+  border-radius: 2px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+.playback-progress-inner {
+  height: 100%;
+  background-color: #1DA0C3;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+.sticky {
+  position: sticky !important;
+  top: 55px;
+  z-index: 200;
+}

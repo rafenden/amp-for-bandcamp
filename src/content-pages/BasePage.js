@@ -1,0 +1,152 @@
+import { DEFAULT_SETTINGS } from '../constants.js';
+
+export class BasePage {
+  constructor(settings = {}) {
+    this.settings = {
+      ...DEFAULT_SETTINGS,
+      ...settings,
+    };
+    this.autoPlayInterval = null;
+    this.pageLeaveHandler = null;
+  }
+
+  init() {
+    this.setupKeyboardShortcuts();
+    this.setupSettingsListeners();
+    this.setupAutoPlayNext();
+    this.setupPageLeaveWarning();
+  }
+
+  static isMatch() {
+    return false;
+  }
+
+  getAudioElement() {
+    return document.querySelector('audio');
+  }
+
+  setupKeyboardShortcuts() {
+    document.addEventListener('keydown', (e) => {
+      if (
+        !this.settings.enableKeyboardShortcuts ||
+        e.target.tagName === 'INPUT' ||
+        e.target.tagName === 'TEXTAREA'
+      ) {
+        return;
+      }
+
+      // See https://developer.mozilla.org/en-US/docs/Web/API/UI_Events/Keyboard_event_code_values
+      switch (e.code) {
+        case 'Space':
+        case 'MediaPlayPause':
+          e.preventDefault();
+          this.togglePlayPause();
+          break;
+        case 'ArrowRight':
+          e.preventDefault();
+          this.fastForward();
+          break;
+        case 'ArrowLeft':
+          e.preventDefault();
+          this.rewind();
+          break;
+        case 'ArrowUp':
+        case 'MediaTrackPrevious':
+          e.preventDefault();
+          this.prevSong();
+          break;
+        case 'ArrowDown':
+        case 'MediaTrackNext':
+          e.preventDefault();
+          this.nextSong();
+          break;
+      }
+    });
+  }
+
+  fastForward() {
+    const audio = this.getAudioElement();
+    const seekTime = this.settings.seekSeconds;
+
+    if (audio && audio.duration - audio.currentTime > seekTime) {
+      audio.currentTime += seekTime;
+    } else if (audio) {
+      audio.currentTime = audio.duration - 1;
+    }
+  }
+
+  rewind() {
+    const audio = this.getAudioElement();
+    const seekTime = this.settings.seekSeconds;
+
+    if (audio) {
+      audio.currentTime = Math.max(0, audio.currentTime - seekTime);
+    }
+  }
+
+  togglePlayPause() {}
+
+  nextSong() {}
+
+  prevSong() {}
+
+  setupSettingsListeners() {
+    try {
+      browser.storage.onChanged.addListener((changes, namespace) => {
+        if (namespace === 'sync') {
+          for (let key in changes) {
+            this.settings[key] = changes[key].newValue;
+          }
+          this.applySettingsChanges(changes);
+        }
+      });
+    } catch (error) {
+      console.error('Error setting up settings listener:', error);
+    }
+  }
+
+  applySettingsChanges(changes) {
+    if (changes.autoPlayNext !== undefined) {
+      this.setupAutoPlayNext();
+    }
+    if (changes.showLeaveWarning !== undefined) {
+      this.setupPageLeaveWarning();
+    }
+  }
+
+  setupAutoPlayNext() {
+    if (this.autoPlayInterval) {
+      clearInterval(this.autoPlayInterval);
+    }
+
+    if (!this.settings.autoPlayNext) {
+      return;
+    }
+
+    this.autoPlayInterval = setInterval(() => {
+      const audio = this.getAudioElement();
+      if (audio && audio.duration - audio.currentTime <= 1) {
+        this.nextSong();
+      }
+    }, 700);
+  }
+
+  setupPageLeaveWarning() {
+    if (this.pageLeaveHandler) {
+      window.removeEventListener('beforeunload', this.pageLeaveHandler);
+    }
+
+    if (this.settings.showLeaveWarning) {
+      this.pageLeaveHandler = (e) => {
+        const audio = this.getAudioElement();
+        if (audio && !audio.paused) {
+          const message =
+            'Music is still playing. Are you sure you want to leave?';
+          e.returnValue = message;
+          return message;
+        }
+      };
+      window.addEventListener('beforeunload', this.pageLeaveHandler);
+    }
+  }
+}
