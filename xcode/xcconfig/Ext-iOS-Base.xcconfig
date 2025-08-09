@@ -1,0 +1,25 @@
+// Ext-iOS-Base.xcconfig
+// Common settings for iOS Safari extension
+
+#include "Base.xcconfig"
+
+// Target settings
+SDKROOT = iphoneos
+TARGETED_DEVICE_FAMILY = 1,2
+
+// Bundle identifier
+PRODUCT_NAME = $(BASE_PRODUCT_NAME) Extension
+PRODUCT_BUNDLE_IDENTIFIER = $(PRODUCT_BUNDLE_IDENTIFIER_BASE).$(EXTENSION_BUNDLE_ID_SUFFIX)
+PRODUCT_MODULE_NAME = $(BASE_MODULE_NAME)Extension
+
+// Info.plist location
+INFOPLIST_FILE = Ext-iOS/Info.plist
+
+// Extension specific settings
+SKIP_INSTALL = YES
+
+// Runtime path settings
+LD_RUNPATH_SEARCH_PATHS = $(inherited) @executable_path/Frameworks @executable_path/../../Frameworks
+
+// Framework settings
+OTHER_LDFLAGS = -framework SafariServices 

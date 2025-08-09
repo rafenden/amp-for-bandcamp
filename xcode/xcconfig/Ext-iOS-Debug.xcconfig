@@ -1,0 +1,5 @@
+// Ext-iOS-Debug.xcconfig
+// iOS Safari extension Debug configuration settings
+
+#include "Ext-iOS-Base.xcconfig"
+#include "Debug.xcconfig"
