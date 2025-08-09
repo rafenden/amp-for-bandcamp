@@ -1,0 +1,32 @@
+// Mac-Base.xcconfig
+// Common settings for macOS configurations
+
+#include "Base.xcconfig"
+
+// Target settings
+SDKROOT = macosx
+SUPPORTED_PLATFORMS = macosx
+COMBINE_HIDPI_IMAGES = YES
+
+// Bundle identifier
+PRODUCT_NAME = $(BASE_PRODUCT_NAME)
+PRODUCT_BUNDLE_IDENTIFIER = $(PRODUCT_BUNDLE_IDENTIFIER_BASE)
+PRODUCT_MODULE_NAME = $(BASE_MODULE_NAME)App
+
+// Info.plist location
+INFOPLIST_FILE = App-Mac/Info.plist
+
+// macOS specific settings
+INFOPLIST_KEY_NSMainStoryboardFile = Main
+INFOPLIST_KEY_NSPrincipalClass = NSApplication
+
+// Framework settings
+OTHER_LDFLAGS = -framework SafariServices -framework WebKit
+
+// App extension bundle identifier
+APP_EXTENSION_BUNDLE_IDENTIFIER = $(PRODUCT_BUNDLE_IDENTIFIER).$(EXTENSION_BUNDLE_ID_SUFFIX)
+
+// macOS specific settings
+ENABLE_HARDENED_RUNTIME = YES
+CODE_SIGN_ENTITLEMENTS = App-Mac/Amp for Bandcamp.entitlements
+DEAD_CODE_STRIPPING = YES

@@ -1,0 +1,34 @@
+// iOS-Base.xcconfig
+// Common settings for iOS configurations
+
+#include "Base.xcconfig"
+
+// Target settings
+SDKROOT = iphoneos
+TARGETED_DEVICE_FAMILY = 1,2
+SUPPORTS_MACCATALYST = NO
+
+// Bundle identifier
+PRODUCT_NAME = $(BASE_PRODUCT_NAME)
+PRODUCT_BUNDLE_IDENTIFIER = $(PRODUCT_BUNDLE_IDENTIFIER_BASE)
+PRODUCT_MODULE_NAME = $(BASE_MODULE_NAME)App
+
+// Info.plist location
+INFOPLIST_FILE = App-iOS/Info.plist
+
+// iOS specific settings
+INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES
+INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen
+INFOPLIST_KEY_UIMainStoryboardFile = Main
+INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait,UIInterfaceOrientationPortraitUpsideDown,UIInterfaceOrientationLandscapeLeft,UIInterfaceOrientationLandscapeRight
+INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait,UIInterfaceOrientationPortraitUpsideDown,UIInterfaceOrientationLandscapeLeft,UIInterfaceOrientationLandscapeRight
+
+// Framework settings
+OTHER_LDFLAGS = -framework SafariServices -framework WebKit
+
+// App extension bundle identifier
+APP_EXTENSION_BUNDLE_IDENTIFIER = $(PRODUCT_BUNDLE_IDENTIFIER).$(EXTENSION_BUNDLE_ID_SUFFIX)
+
+// Interface style settings
+SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO
+ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES 

@@ -1,0 +1,5 @@
+// Mac-Release.xcconfig
+// macOS Release configuration settings
+
+#include "Mac-Base.xcconfig"
+#include "Release.xcconfig"

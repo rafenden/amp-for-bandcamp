@@ -1,0 +1,5 @@
+// Mac-Debug.xcconfig
+// macOS Debug configuration settings
+
+#include "Mac-Base.xcconfig"
+#include "Debug.xcconfig"

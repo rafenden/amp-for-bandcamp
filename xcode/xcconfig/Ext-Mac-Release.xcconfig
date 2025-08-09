@@ -1,0 +1,5 @@
+// Ext-Mac-Release.xcconfig
+// macOS Safari extension Release configuration settings
+
+#include "Ext-Mac-Base.xcconfig"
+#include "Release.xcconfig"

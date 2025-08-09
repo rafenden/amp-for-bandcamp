@@ -1,0 +1,31 @@
+// Ext-Mac-Base.xcconfig
+// Common settings for macOS Safari extension
+
+#include "Base.xcconfig"
+
+// Target settings
+SDKROOT = macosx
+SUPPORTED_PLATFORMS = macosx
+COMBINE_HIDPI_IMAGES = YES
+
+// Bundle identifier
+PRODUCT_NAME = $(BASE_PRODUCT_NAME) Extension
+PRODUCT_BUNDLE_IDENTIFIER = $(PRODUCT_BUNDLE_IDENTIFIER_BASE).$(EXTENSION_BUNDLE_ID_SUFFIX)
+PRODUCT_MODULE_NAME = $(BASE_MODULE_NAME)Extension
+
+// Info.plist location
+INFOPLIST_FILE = Ext-Mac/Info.plist
+
+// Extension specific settings
+SKIP_INSTALL = YES
+CODE_SIGN_ENTITLEMENTS = Ext-Mac/Amp for Bandcamp.entitlements
+
+// macOS specific settings
+ENABLE_HARDENED_RUNTIME = YES
+
+// Runtime path settings
+LD_RUNPATH_SEARCH_PATHS = $(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks
+
+// Framework settings
+OTHER_LDFLAGS = -framework SafariServices
+DEAD_CODE_STRIPPING = YES 
