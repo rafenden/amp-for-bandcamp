@@ -1,5 +1,0 @@
-// iOS-Release.xcconfig
-// iOS Release configuration settings
-
-#include "iOS-Base.xcconfig"
-#include "Release.xcconfig"

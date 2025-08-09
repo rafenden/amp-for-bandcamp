@@ -1,5 +1,0 @@
-// iOS-Debug.xcconfig
-// iOS Debug configuration settings
-
-#include "iOS-Base.xcconfig"
-#include "Debug.xcconfig"

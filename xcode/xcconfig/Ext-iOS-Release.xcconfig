@@ -1,5 +1,0 @@
-// Ext-iOS-Release.xcconfig
-// iOS Safari extension Release configuration settings
-
-#include "Ext-iOS-Base.xcconfig"
-#include "Release.xcconfig"
