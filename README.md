@@ -72,7 +72,7 @@ After finishing the "build" step from the above, you can now proceed to the inst
 2. Install Xcode from the Mac App Store
 3. Open the Xcode project:
    ```bash
-   open "xcode/Amp for Bandcamp.xcodeproj"
+   open "safari/Amp for Bandcamp.xcodeproj"
    ```
 4. Build and run the project in Xcode
 5. Enable the extension in Safari preferences:

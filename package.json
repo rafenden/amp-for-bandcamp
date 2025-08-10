@@ -21,7 +21,7 @@
   "scripts": {
     "build": "npm run build:zip && npm run build:safari",
     "build:zip": "zip -r dist/amp-for-bandcamp.zip manifest.json src/ vendor/ icons/",
-    "build:safari": "xcodebuild -project 'xcode/Amp for Bandcamp.xcodeproj' -scheme 'Amp for Bandcamp (macOS)' -configuration Release -derivedDataPath dist/safari clean build",
+    "build:safari": "xcodebuild -project 'safari/Amp for Bandcamp.xcodeproj' -scheme 'Amp for Bandcamp (macOS)' -configuration Release -derivedDataPath dist/safari clean build",
     "test": "playwright test",
     "test:ui": "playwright test --ui",
     "test:debug": "playwright test --debug"
