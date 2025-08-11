@@ -51,6 +51,7 @@ h2, legend {
   font-size: 14px;
   font-weight: 600;
   margin-bottom: 8px;
+  padding: 0;
 }
 
 fieldset {
@@ -82,7 +83,12 @@ fieldset {
   text-align: center;
 }
 
-.shortcuts {
+.settings input[type="range"] {
+  flex: 1;
+  margin: 0 8px;
+}
+
+.shortcuts dl {
   margin: 0;
   display: grid;
   grid-template-columns: 60px 1fr;
@@ -123,4 +129,9 @@ footer {
   margin-top: 0;
   padding-top: 10px;
   border-top: 1px solid var(--footer-border);
+}
+
+.settings-volume span {
+  width: 30px;
+  display: inline-block;
 }

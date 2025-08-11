@@ -5,4 +5,5 @@ export const DEFAULT_SETTINGS = {
   showLeaveWarning: true,
   showProgressBar: true,
   enableKeyboardShortcuts: true,
+  volume: 100,
 };

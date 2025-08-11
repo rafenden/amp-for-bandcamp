@@ -8,6 +8,8 @@ const enableKeyboardShortcutsToggle = document.getElementById(
   'enableKeyboardShortcuts',
 );
 const seekSecondsInput = document.getElementById('seekSeconds');
+const volumeSlider = document.getElementById('volumeSlider');
+const volumeValue = document.getElementById('volumeValue');
 const keyboardShortcutsSection = document.getElementById(
   'keyboardShortcutsSection',
 );
@@ -28,6 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
       showProgressBarToggle.checked = items.showProgressBar;
       enableKeyboardShortcutsToggle.checked = items.enableKeyboardShortcuts;
       seekSecondsInput.value = items.seekSeconds;
+      volumeSlider.value = items.volume;
+      volumeValue.textContent = `${items.volume}%`;
       updateKeyboardShortcutsVisibility(items.enableKeyboardShortcuts);
     })
     .catch(console.error);
@@ -72,4 +76,10 @@ seekSecondsInput.addEventListener('change', () => {
   );
   seekSecondsInput.value = value;
   browser.storage.sync.set({ seekSeconds: value }).catch(console.error);
+});
+
+volumeSlider.addEventListener('input', () => {
+  const value = parseInt(volumeSlider.value);
+  volumeValue.textContent = `${value}%`;
+  browser.storage.sync.set({ volume: value }).catch(console.error);
 });

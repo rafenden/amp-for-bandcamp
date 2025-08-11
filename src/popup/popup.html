@@ -13,31 +13,37 @@
   
   <fieldset class="settings">
     <legend>Settings</legend>
-    <label>
+    <label class="settings-volume">
+      Volume <span id="volumeValue">100%</span>
+      <input type="range" id="volumeSlider" min="0" max="100" step="1" value="100">
+    </label>
+
+    <label class="settings-leave-warning">
       <input type="checkbox" id="showLeaveWarning" checked>
       Warn When Leaving Site During Playback
     </label>
-    <label>
+
+    <label class="settings-sticky-player">
       <input type="checkbox" id="stickyPlayer" checked>
       Pin Player at Top of Album Page
     </label>
 
-    <label>
+    <label class="settings-auto-play-next">
       <input type="checkbox" id="autoPlayNext" checked>
       Play Next Track Automatically
     </label>
 
-    <label>
+    <label class="settings-progress-bar">
       <input type="checkbox" id="showProgressBar" checked>
       Show Progress Bar on Feed Page
     </label>
 
-    <label>
+    <label class="settings-keyboard-shortcuts">
       <input type="checkbox" id="enableKeyboardShortcuts" checked>
       Enable Keyboard Shortcuts
     </label>
 
-    <div id="seekDurationSection">
+    <div class="settings-seek-duration" id="seekDurationSection">
       <label>
         <input type="number" id="seekSeconds" min="5" max="60" step="5" value="30">
         Skip Duration (seconds)
@@ -45,9 +51,9 @@
     </div>
   </fieldset>
 
-  <fieldset id="keyboardShortcutsSection">
+  <fieldset class="shortcuts" id="keyboardShortcutsSection">
     <legend>Keyboard Shortcuts</legend>
-    <dl class="shortcuts">
+    <dl>
       <dt><kbd>Space</kbd></dt>
       <dd>Play/Pause</dd>
 

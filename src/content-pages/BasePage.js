@@ -15,6 +15,7 @@ export class BasePage {
     this.setupSettingsListeners();
     this.setupAutoPlayNext();
     this.setupPageLeaveWarning();
+    this.setupVolumeControl();
   }
 
   static isMatch() {
@@ -23,6 +24,13 @@ export class BasePage {
 
   getAudioElement() {
     return document.querySelector('audio');
+  }
+
+  applyVolumeOverride() {
+    const audio = this.getAudioElement();
+    if (audio && this.settings.volume !== undefined) {
+      audio.volume = this.settings.volume / 100;
+    }
   }
 
   setupKeyboardShortcuts() {
@@ -112,6 +120,9 @@ export class BasePage {
     if (changes.showLeaveWarning !== undefined) {
       this.setupPageLeaveWarning();
     }
+    if (changes.volume !== undefined) {
+      this.applyVolumeOverride();
+    }
   }
 
   setupAutoPlayNext() {
@@ -147,6 +158,27 @@ export class BasePage {
         }
       };
       window.addEventListener('beforeunload', this.pageLeaveHandler);
+    }
+  }
+
+  setupVolumeControl() {
+    const audio = this.getAudioElement();
+    if (audio) {
+      this.applyVolumeOverride();
+      
+      const observer = new MutationObserver(() => {
+        const newAudio = this.getAudioElement();
+        if (newAudio && newAudio !== audio) {
+          this.applyVolumeOverride();
+        }
+      });
+      
+      observer.observe(document.body, {
+        childList: true,
+        subtree: true
+      });
+    } else {
+      setTimeout(() => this.setupVolumeControl(), 1000);
     }
   }
 }
