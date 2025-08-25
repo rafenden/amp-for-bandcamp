@@ -21,6 +21,7 @@ A multi-browser extension (Chrome, Firefox, Safari) that amplifies Bandcamp func
   - **Down Arrow**: Previous track
   - **Right Arrow**: Fast forward
   - **Left Arrow**: Rewind
+  - **w**: Add a current song to the wishlist
 
 ## Building
 

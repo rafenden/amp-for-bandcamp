@@ -78,4 +78,10 @@ export class AlbumPage extends BasePage {
       super.prevSong();
     }
   }
+
+  addToWishlist() {
+    document
+      .querySelector('.wishlist #wishlist-msg, .wishlisted #wishlisted-msg')
+      ?.click();
+  }
 }

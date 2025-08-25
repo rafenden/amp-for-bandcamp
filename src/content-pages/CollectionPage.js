@@ -98,4 +98,8 @@ export class CollectionPage extends BasePage {
       }
     }
   }
+
+  addToWishlist() {
+    document.querySelector('.wishlisted-msg.collection-btn')?.click();
+  }
 }

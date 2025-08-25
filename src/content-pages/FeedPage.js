@@ -125,4 +125,12 @@ export class FeedPage extends BasePage {
       this.setupProgressBar();
     }
   }
+
+  addToWishlist() {
+    document
+      .querySelector(
+        '.collection-item-container.playing .collect-item.wishlisted .wishlisted-msg, .collection-item-container.playing .collect-item:not(.wishlisted) .wishlist-msg',
+      )
+      ?.click();
+  }
 }

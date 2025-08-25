@@ -68,6 +68,10 @@ export class BasePage {
           e.preventDefault();
           this.nextSong();
           break;
+        case 'KeyW':
+          e.preventDefault();
+          this.addToWishlist();
+          break;
       }
     });
   }
@@ -97,6 +101,8 @@ export class BasePage {
   nextSong() {}
 
   prevSong() {}
+
+  addToWishlist() {}
 
   setupSettingsListeners() {
     try {
@@ -165,17 +171,17 @@ export class BasePage {
     const audio = this.getAudioElement();
     if (audio) {
       this.applyVolumeOverride();
-      
+
       const observer = new MutationObserver(() => {
         const newAudio = this.getAudioElement();
         if (newAudio && newAudio !== audio) {
           this.applyVolumeOverride();
         }
       });
-      
+
       observer.observe(document.body, {
         childList: true,
-        subtree: true
+        subtree: true,
       });
     } else {
       setTimeout(() => this.setupVolumeControl(), 1000);

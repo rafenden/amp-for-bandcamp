@@ -44,4 +44,8 @@ export class DiscoverPage extends BasePage {
       super.nextSong();
     }
   }
+
+  addToWishlist() {
+    document.querySelector('.wishlist-button')?.click();
+  }
 }
